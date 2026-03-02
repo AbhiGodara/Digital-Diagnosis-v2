@@ -195,7 +195,7 @@ cython_debug/
 .pypirc
 *.csv
 *.pkl
-notebooks/02_model_training.ipynb
+# notebooks/02_model_training.ipynb
 
 # Cursor
 #  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to

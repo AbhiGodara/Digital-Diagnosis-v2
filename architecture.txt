@@ -1,0 +1,89 @@
+EXPLANATION_PROMPT = """
+You are a medical explanation assistant. A machine learning model 
+has already made the diagnosis. Your only job is to explain it clearly.
+
+Patient: {age} year old {gender}
+Described symptoms: "{user_text}"
+Symptom duration: {duration}
+
+ML Model Predictions:
+1. {disease1} — {prob1}% probability
+   Known symptoms: {symptoms1}
+   Severity: {severity1}
+
+2. {disease2} — {prob2}% probability
+   Known symptoms: {symptoms2}
+   Severity: {severity2}
+
+3. {disease3} — {prob3}% probability
+   Known symptoms: {symptoms3}
+   Severity: {severity3}
+
+Based on the top prediction ({disease1}), provide:
+1. Simple explanation of what this condition is
+2. Immediate home care advice: {advice1}
+3. Warning signs requiring urgent medical attention
+4. Recommended specialist: {specialist1}
+
+Keep response under 250 words. End with a disclaimer that this
+is AI-generated and not a substitute for professional medical advice.
+Do NOT suggest diagnoses beyond what the ML model has provided.
+"""
+```
+
+---
+
+## Revised Architecture — Clean Version
+```
+User Input (free text + age + gender)
+            │
+            ▼
+┌─────────────────────────┐
+│   LLM CALL #1           │
+│   Symptom Extraction    │
+│                         │
+│   Input: user text      │
+│         + 377 symptoms  │
+│   Output: matched       │
+│           symptom list  │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│  Binary Vector Builder  │
+│  matched list → 377-dim │
+│  binary vector          │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│   LightGBM Classifier   │
+│                         │
+│   Input: binary vector  │
+│   Output: top 3         │
+│   diseases + probs      │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│  Knowledge Base Lookup  │
+│  Direct JSON lookup for │
+│  each of top 3 diseases │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│   LLM CALL #2           │
+│   Explanation Generator │
+│                         │
+│   Input: predictions    │
+│         + disease info  │
+│         + user text     │
+│         + patient info  │
+│   Output: explanation   │
+│           + advice      │
+│           + disclaimer  │
+└──────────┬──────────────┘
+           │
+           ▼
+    Streamlit Display

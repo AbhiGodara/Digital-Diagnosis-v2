@@ -1,0 +1,48 @@
+digital-diagnosis-2.0/
+│
+├── frontend/
+│   └── app.py                          # Streamlit UI - all pages and components
+│
+├── backend/
+│   ├── main.py                         # FastAPI app entry point, all routes
+│   ├── symptom_parser.py               # LLM Call #1 - free text to binary vector
+│   ├── classifier.py                   # LightGBM model loading and inference
+│   ├── knowledge_base.py               # JSON lookup for top 3 predicted diseases
+│   ├── prompt_builder.py               # Assembles final prompt for LLM Call #2
+│   ├── llm_client.py                   # Groq API wrapper for both LLM calls
+│   └── schemas.py                      # Pydantic request/response models
+│
+├── data/
+│   ├── raw/
+│   │   └── dataset.csv                 # Original 377-symptom dataset
+│   ├── processed/
+│   │   ├── train.csv                   # Filtered + split training data
+│   │   └── test.csv                    # Held-out test set
+│   ├── symptom_list.txt                # All 377 symptom names, one per line
+│   └── disease_knowledge.json          # Curated info for each disease class
+│
+├── models/
+│   ├── lightgbm_model.pkl              # Trained and serialized LightGBM model
+│   └── label_encoder.pkl              # Sklearn LabelEncoder for disease names
+│
+├── notebooks/
+│   ├── 01_eda.ipynb                    # Exploratory data analysis
+│   ├── 02_preprocessing.ipynb          # Filtering, balancing, train/test split
+│   ├── 03_training.ipynb               # LightGBM training + evaluation metrics
+│   └── 04_symptom_parser_testing.ipynb # Manual evaluation of LLM extraction
+│
+├── evaluation/
+│   ├── test_cases.json                 # 50-100 manually created test cases
+│   ├── evaluate_parser.py              # Script to measure extraction accuracy
+│   └── evaluate_classifier.py         # Script to generate F1, accuracy, top-3
+│
+├── tests/
+│   ├── test_symptom_parser.py          # Unit tests for parser module
+│   ├── test_classifier.py             # Unit tests for classifier module
+│   └── test_knowledge_base.py         # Unit tests for knowledge base lookup
+│
+├── .env                                # GROQ_API_KEY goes here, never commit
+├── .env.example                        # Template showing required env variables
+├── .gitignore                          # Excludes .env, models/, __pycache__ etc
+├── requirements.txt                    # All Python dependencies with versions
+└── README.md                           # Setup instructions and architecture diagram

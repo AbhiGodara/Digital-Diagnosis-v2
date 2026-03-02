@@ -1,0 +1,35 @@
+# ── Core ML ───────────────────────────────────────────────────────────
+lightgbm==4.3.0
+scikit-learn==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+
+# ── LLM & LangChain ───────────────────────────────────────────────────
+# groq==0.9.0
+langchain==0.2.6
+langchain-groq==0.1.6
+langchain-core==0.2.10
+
+# ── Backend (FastAPI) ─────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.7.4
+python-dotenv==1.0.1
+
+# ── Frontend (Streamlit) ──────────────────────────────────────────────
+streamlit
+
+# ── Data & Serialization ──────────────────────────────────────────────
+# pickle5==0.0.12        # only needed if Python < 3.8, safe to keep
+joblib==1.4.2
+
+# ── Evaluation & Notebooks ────────────────────────────────────────────
+matplotlib==3.9.0
+seaborn==0.13.2
+jupyter==1.0.0
+ipykernel==6.29.4
+
+# ── Utilities ─────────────────────────────────────────────────────────
+requests==2.32.3
+python-multipart==0.0.9    # for FastAPI file uploads
+httpx==0.27.0              # async HTTP client used by FastAPI internally

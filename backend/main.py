@@ -9,10 +9,12 @@ Endpoints:
     POST /api/diagnose      — main diagnosis pipeline
     GET  /api/health        — health check
     GET  /api/diseases      — list all diseases the model knows
-    GET  /api/symptoms      — list all 377 symptoms
+    GET  /api/symptoms      — list all 84 symptoms
 """
 
 import logging
+import sys
+import os
 from datetime import datetime
 from contextlib import asynccontextmanager
 
@@ -20,9 +22,13 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+# Ensure backend folder is in Python path for direct uvicorn execution
+sys.path.append(os.path.dirname(__file__))
+
 from classifier import classifier
 from symptom_parser import parse_symptoms
 from knowledge_base import get_disease_info
+from llm_client import llm_client
 
 # ── Logging ───────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -60,7 +66,10 @@ app.add_middleware(
 
 # ── Schemas ───────────────────────────────────────────────────────────
 class DiagnoseRequest(BaseModel):
-    symptoms_text: str          # free text from the user
+    symptoms_text:    str          # free text from the user
+    patient_age:      int
+    patient_gender:   str
+    symptom_duration: str
 
 class PredictionItem(BaseModel):
     disease:     str
@@ -73,6 +82,7 @@ class DiagnoseResponse(BaseModel):
     predictions:        list[PredictionItem]
     matched_symptoms:   list[str]
     active_symptom_count: int
+    summary:            str
     processing_time_ms: float
     timestamp:          str
 
@@ -123,6 +133,17 @@ async def diagnose(request: DiagnoseRequest):
                 info=        get_disease_info(pred["disease"]),
             ))
 
+        # Step 4 — generate diagnosis summary
+        logger.info("Generating diagnosis summary...")
+        summary = llm_client.get_diagnosis_summary(
+            symptoms_text=request.symptoms_text,
+            patient_age=request.patient_age,
+            patient_gender=request.patient_gender,
+            symptom_duration=request.symptom_duration,
+            matched_symptoms=matched_symptoms,
+            predictions=[p.model_dump() for p in predictions]
+        )
+
         processing_ms = round((datetime.now() - start).total_seconds() * 1000, 2)
 
         return DiagnoseResponse(
@@ -130,6 +151,7 @@ async def diagnose(request: DiagnoseRequest):
             predictions=          predictions,
             matched_symptoms=     matched_symptoms,
             active_symptom_count= sum(binary_vector),
+            summary=              summary,
             processing_time_ms=   processing_ms,
             timestamp=            datetime.now().isoformat(),
         )
@@ -164,7 +186,7 @@ async def get_diseases():
 
 @app.get("/api/symptoms")
 async def get_symptoms():
-    """Returns the full list of 377 symptoms used as model features."""
+    """Returns the full list of 84 symptoms used as model features."""
     return {
         "total":    classifier.num_symptoms,
         "symptoms": classifier.symptom_list,

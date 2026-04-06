@@ -34,7 +34,7 @@ class LLMClient:
 
         # Single model instance reused for both calls
         self.model = ChatGroq(
-            model="openai/gpt-oss-120b",
+            model="llama-3.3-70b-versatile",
             temperature=0.0,
             api_key=api_key,
         )
@@ -44,6 +44,9 @@ class LLMClient:
     def get_diagnosis_summary(
         self,
         symptoms_text:    str,
+        patient_age:      int,
+        patient_gender:   str,
+        symptom_duration: str,
         matched_symptoms: list,
         predictions:      list,
     ) -> str:
@@ -53,6 +56,8 @@ class LLMClient:
         Parameters
         ----------
         symptoms_text    : original free-text from the patient
+        patient_age      : patient's age in years
+        symptom_duration : how long the patient has felt this way
         matched_symptoms : list of matched symptom strings
         predictions      : top-3 dicts from classifier + knowledge base
                            Each has: disease, probability, confidence, info
@@ -63,6 +68,9 @@ class LLMClient:
         """
         prompt = build_diagnosis_prompt(
             symptoms_text=    symptoms_text,
+            patient_age=      patient_age,
+            patient_gender=   patient_gender,
+            symptom_duration= symptom_duration,
             matched_symptoms= matched_symptoms,
             predictions=      predictions,
         )
@@ -137,6 +145,9 @@ if __name__ == "__main__":
 
     summary = llm_client.get_diagnosis_summary(
         symptoms_text=    "I have a bad fever, keep coughing, chest hurts when I breathe. Very tired.",
+        patient_age=      35,
+        patient_gender=   "male",
+        symptom_duration= "3 days",
         matched_symptoms= ["fever", "cough", "hurts to breath", "fatigue", "chest tightness"],
         predictions=      sample_predictions,
     )

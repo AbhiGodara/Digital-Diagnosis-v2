@@ -193,8 +193,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-*.csv
+# *.csv
 *.pkl
+xtra/
+papers/
 # notebooks/02_model_training.ipynb
 
 # Cursor

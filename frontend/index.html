@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPilot</title>
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AI Medical Diagnosis</h1>
+                        <p>Advanced AI-powered symptom analysis</p>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Diseases</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2K+</div>
+                        <div class="stat-label">Training Samples</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">86%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Input Section -->
+            <section class="input-section" id="inputSection">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <div class="header-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Patient Information & Symptoms</h2>
+                            <p>let us analyze your symptoms using advanced AI System</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <!-- Patient Information Form -->
+                        <div class="patient-info-section">
+                            <h3><i class="fas fa-user"></i> Patient Details</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="patientAge">Age *</label>
+                                    <input type="number" id="patientAge" placeholder="Enter age" min="1" max="120" required>
+                                    <span class="form-hint">Required for accurate diagnosis</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patientGender">Gender *</label>
+                                    <select id="patientGender" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="symptomDuration">Symptom Duration</label>
+                                    <select id="symptomDuration">
+                                        <option value="">Select duration</option>
+                                        <option value="few_hours">Few hours</option>
+                                        <option value="1_day">1 day</option>
+                                        <option value="2_3_days">2-3 days</option>
+                                        <option value="1_week">1 week</option>
+                                        <option value="2_weeks">2 weeks</option>
+                                        <option value="1_month">1 month or more</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Symptoms Input Section -->
+                        <div class="symptoms-section">
+                            <h3><i class="fas fa-stethoscope"></i> Describe Your Symptoms</h3>
+                            
+                            <div class="symptom-input-container">
+                                <label for="symptomsText" class="main-label">
+                                    Tell us about your symptoms in detail
+                                </label>
+                                <textarea 
+                                    id="symptomsText" 
+                                    placeholder="Enter your symptoms(e.g., headache, fever, nausea) here(minimum 20 characters)..."
+                                    rows="8"
+                                    maxlength="2000"
+                                ></textarea>
+                                
+                                <div class="input-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-keyboard"></i>
+                                        <span id="charCount">0</span> / 2000 characters
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-font"></i>
+                                        <span id="wordCount">0</span> words
+                                    </div>
+                                    <!-- <div class="stat-item">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <span id="medicalTerms">0</span> medical terms detected
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Common Symptoms Quick Add -->
+                            <div class="quick-symptoms">
+                                <h4><i class="fas fa-lightning-bolt"></i> Quick Add Common Symptoms</h4>
+                                <div class="symptom-tags" id="commonSymptoms">
+                                    <button type="button" class="symptom-tag" data-symptom="fever">Fever</button>
+                                    <button type="button" class="symptom-tag" data-symptom="headache">Headache</button>
+                                    <button type="button" class="symptom-tag" data-symptom="cough">Cough</button>
+                                    <button type="button" class="symptom-tag" data-symptom="nausea">Nausea</button>
+                                    <button type="button" class="symptom-tag" data-symptom="fatigue">Fatigue</button>
+                                    <button type="button" class="symptom-tag" data-symptom="dizziness">Dizziness</button>
+                                    <button type="button" class="symptom-tag" data-symptom="chest pain">Chest Pain</button>
+                                    <button type="button" class="symptom-tag" data-symptom="shortness of breath">Shortness of Breath</button>
+                                    <button type="button" class="symptom-tag" data-symptom="muscle aches">Muscle Aches</button>
+                                    <button type="button" class="symptom-tag" data-symptom="sore throat">Sore Throat</button>
+                                    <button type="button" class="symptom-tag" data-symptom="runny nose">Runny Nose</button>
+                                    <button type="button" class="symptom-tag" data-symptom="vomiting">Vomiting</button>
+                                    <button type="button" class="symptom-tag" data-symptom="diarrhea">Diarrhea</button>
+                                    <button type="button" class="symptom-tag" data-symptom="stomach cramps">Stomach Cramps</button>
+                                    <button type="button" class="symptom-tag" data-symptom="back pain">Back Pain</button>
+                                </div>
+                            </div>
+
+                            <!-- <div style="margin-top: 16px; text-align: center;">
+                                <button type="button" id="loadExampleBtn" class="btn-secondary" style="padding: 12px 24px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Load Example Symptoms</span>
+                                </button>
+                            </div> -->
+
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-section">
+                            <button class="btn-primary" id="analyzeBtn" disabled>
+                                <i class="fas fa-brain"></i>
+                                <span>Analyze Symptoms with AI</span>
+                                <small>Get instant diagnosis</small>
+                            </button>
+                            <button class="btn-secondary" id="clearBtn">
+                                <i class="fas fa-eraser"></i>
+                                <span>Clear All Fields</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analysis Progress Section -->
+            <section class="analysis-section hidden" id="analysisSection">
+                <div class="dashboard-card">
+                    <div class="analysis-header">
+                        <div class="analysis-spinner">
+                            <div class="spinner-ring">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <h2>Analyzing Your Symptoms with Our AI</h2>
+                        <p>Please wait while we process your information...</p>
+                        <div class="single-progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section hidden" id="resultsSection">
+                <!-- Medical Disclaimer -->
+                <div class="disclaimer-alert">
+                    <div class="alert-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="alert-content">
+                        <h4>Important Medical Disclaimer</h4>
+                        <p>This AI diagnostic tool is designed for educational and informational purposes only. It should never replace professional medical consultation, diagnosis, or treatment. Always seek advice from qualified healthcare professionals for any medical concerns.</p>
+                    </div>
+                </div>
+
+                <!-- Results Dashboard -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <div class="header-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="header-content">
+                            <h2>AI Diagnosis Results</h2>
+                            <p>Based on Our Model analysis of your symptoms</p>
+                        </div>
+                        <!-- <div class="confidence-indicator">
+                            <div class="confidence-circle" id="confidenceCircle">
+                                <span id="confidenceValue">85%</span>
+                            </div>
+                            <div class="confidence-label">Overall Confidence</div>
+                        </div> -->
+                    </div>
+                    
+                    <div class="card-body">
+                        <!-- Processing Summary -->
+                        <!-- Quick Diagnosis Info -->
+                        <div class="quick-diagnosis-info" style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border: 2px solid #0ea5e9; border-radius: 16px; padding: 24px; margin-bottom: 24px;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                                <div>
+                                    <div style="font-size: 36px; color: #0284c7; font-weight: 700;" id="totalPredictions">3</div>
+                                    <div style="font-size: 14px; color: #0369a1; font-weight: 600;">Possible Conditions</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 36px; color: #0284c7; font-weight: 700;" id="topProbability">0%</div>
+                                    <div style="font-size: 14px; color: #0369a1; font-weight: 600;">Top Match Probability</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 36px; color: #0284c7; font-weight: 700;" id="processingTime">0s</div>
+                                    <div style="font-size: 14px; color: #0369a1; font-weight: 600;">Analysis Time</div>
+                                </div>
+                                <!-- <div>
+                                    <div style="font-size: 36px; color: #0284c7; font-weight: 700;" id="keywordsCount">0</div>
+                                    <div style="font-size: 14px; color: #0369a1; font-weight: 600;">Keywords Detected</div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Top 3 Diagnosis Results -->
+                        <div class="diagnosis-results" id="diagnosisResults">
+                            <!-- Results will be populated here by backend -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="results-actions">
+                    <button class="btn-primary" id="newDiagnosisBtn">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>New Diagnosis</span>
+                    </button>
+                    <button class="btn-secondary" id="downloadReportBtn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Report</span>
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- Results Section -->
+            <section class="results-section hidden" id="resultsSection">
+                <div class="pipeline-info" style="background: linear-gradient(135deg, #e0e7ff, #dbeafe); border: 2px solid #3b82f6; border-radius: 16px; padding: 20px; margin-bottom: 24px;">
+                    <h4 style="color: #1e40af; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-cogs"></i> AI Processing Pipeline
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;">
+                        <div style="background: white; padding: 12px; border-radius: 8px; text-align: center;">
+                            <div style="color: #3b82f6; font-size: 24px; margin-bottom: 4px;">1️⃣</div>
+                            <div style="font-size: 12px; font-weight: 600; color: #374151;">Text Cleaning</div>
+                            <div style="font-size: 10px; color: #6b7280;">Remove special chars</div>
+                        </div>
+                        <div style="background: white; padding: 12px; border-radius: 8px; text-align: center;">
+                            <div style="color: #3b82f6; font-size: 24px; margin-bottom: 4px;">2️⃣</div>
+                            <div style="font-size: 12px; font-weight: 600; color: #374151;">Tokenization</div>
+                            <div style="font-size: 10px; color: #6b7280;">Split into words</div>
+                        </div>
+                        <div style="background: white; padding: 12px; border-radius: 8px; text-align: center;">
+                            <div style="color: #3b82f6; font-size: 24px; margin-bottom: 4px;">3️⃣</div>
+                            <div style="font-size: 12px; font-weight: 600; color: #374151;">Stopword Removal</div>
+                            <div style="font-size: 10px; color: #6b7280;">Filter irrelevant words</div>
+                        </div>
+                        <div style="background: white; padding: 12px; border-radius: 8px; text-align: center;">
+                            <div style="color: #3b82f6; font-size: 24px; margin-bottom: 4px;">4️⃣</div>
+                            <div style="font-size: 12px; font-weight: 600; color: #374151;">Lemmatization</div>
+                            <div style="font-size: 10px; color: #6b7280;">Convert to base form</div>
+                        </div>
+                        <div style="background: white; padding: 12px; border-radius: 8px; text-align: center;">
+                            <div style="color: #3b82f6; font-size: 24px; margin-bottom: 4px;">5️⃣</div>
+                            <div style="font-size: 12px; font-weight: 600; color: #374151;">BioBERT Model</div>
+                            <div style="font-size: 10px; color: #6b7280;">Transformer prediction</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF NEW SECTION -->
+                
+                <!-- Medical Disclaimer -->
+                <div class="disclaimer-alert">
+
+
+            <!-- Previous Diagnoses -->
+            <section class="history-section" id="historySection">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <div class="header-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="header-content">
+                            <h3>Previous Diagnoses</h3>
+                            <p>Your recent AI diagnosis history</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="history-list" id="historyList">
+                            <!-- History items will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-brain"></i> AI Medical Diagnosis</h4>
+                    <p>Advanced AI system for medical symptom analysis, trained on 2k+ medical records and 42 unique diseases.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">BioBERT</span>
+                        <span class="tech-badge">NLP Processing</span>
+                        <span class="tech-badge">Fine Tuning</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-chart-bar"></i> Model Performance</h4>
+                    <ul class="performance-list">
+                        <li><span class="metric">Macro F1 Score :</span> <span class="value">87</span></li>
+                        <li><span class="metric">Test Accuracy:</span> <span class="value">86%</span></li>
+                        <li><span class="metric">Top-3 Accuracy:</span> <span class="value">96.1%</span></li>
+                        <li><span class="metric">Response Time:</span> <span class="value">&lt;2 seconds</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Safety & Ethics</h4>
+                    <ul class="safety-list">
+                        <li><i class="fas fa-check"></i> Educational purpose only</li>
+                        <li><i class="fas fa-check"></i> Privacy-focused design</li>
+                        <li><i class="fas fa-check"></i> No data storage</li>
+                        <li><i class="fas fa-check"></i> Professional medical disclaimer</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Medical Diagnosis System. Built for educational and research purposes.</p>
+                    <p><strong>Important:</strong> This system is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Processing with AI...</h3>
+            <p>Please wait while we analyze your symptoms</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

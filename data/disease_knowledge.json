@@ -1,0 +1,902 @@
+{
+  "hypertensive disease": {
+    "immediate_advice": [
+      "Do not stop antihypertensive medications abruptly — sudden discontinuation can cause rebound hypertension crisis",
+      "Measure blood pressure at home with a validated device, ideally in the morning and evening, seated after 5 minutes of rest",
+      "Reduce dietary sodium to under 2 grams per day and follow the DASH diet — rich in fruits, vegetables, and low-fat dairy",
+      "Limit alcohol to no more than 1 drink per day for women, 2 for men, and avoid smoking entirely"
+    ],
+    "quick_solutions": [
+      "First-line medications include ACE inhibitors, ARBs, calcium channel blockers, or thiazide diuretics — often started as a single-pill combination per 2024 ESC guidelines",
+      "Target blood pressure is below 130/80 mmHg for most adults; relaxed targets apply for those over 85 or with frailty",
+      "Regular aerobic exercise of at least 30 minutes most days reduces systolic BP by 5–8 mmHg",
+      "Weight loss of even 5 kg can meaningfully lower blood pressure in overweight patients",
+      "Home BP monitoring improves adherence and detects white-coat or masked hypertension"
+    ],
+    "when_to_seek_help": "Seek emergency care immediately if BP exceeds 180/120 mmHg with symptoms such as severe headache, chest pain, shortness of breath, visual changes, or confusion — this represents a hypertensive emergency requiring IV treatment in ICU.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Cardiologist / Nephrologist / General Physician"
+  },
+  "coronary arteriosclerosis / coronary heart disease": {
+    "immediate_advice": [
+      "Take prescribed antiplatelet therapy (aspirin or clopidogrel) daily without missing doses — stopping abruptly can trigger acute MI",
+      "Carry sublingual nitroglycerine at all times and use it for acute angina episodes — if chest pain persists beyond 3 doses in 15 minutes, call emergency services",
+      "Maintain a cardiac-friendly diet low in saturated fat, trans fat, and cholesterol — Mediterranean diet has strong evidence",
+      "Monitor and control all risk factors daily: blood pressure, blood sugar, and cholesterol"
+    ],
+    "quick_solutions": [
+      "Statins are mandatory for all CAD patients regardless of baseline LDL — target LDL below 55 mg/dL per ESC 2024 guidelines",
+      "Beta-blockers reduce myocardial oxygen demand and are first-line for stable angina",
+      "Cardiac rehabilitation programs reduce mortality by up to 25% after coronary events",
+      "Percutaneous coronary intervention (PCI) or CABG may be indicated for significant stenoses — decision based on coronary anatomy and heart function",
+      "Annual influenza vaccination is recommended as it reduces cardiovascular events in CAD patients"
+    ],
+    "when_to_seek_help": "Seek emergency care for chest pain lasting more than 15–20 minutes especially at rest, pain radiating to jaw or left arm, new onset breathlessness, sweating, or syncope — these suggest acute MI or unstable angina.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Cardiologist / Interventional Cardiologist"
+  },
+  "myocardial infarction": {
+    "immediate_advice": [
+      "Call emergency services immediately — do not drive yourself to hospital as cardiac arrest can occur en route",
+      "Chew 300 mg aspirin immediately if not contraindicated — this reduces clot propagation within minutes",
+      "Lie down, stay calm, and loosen any tight clothing around the chest and neck",
+      "If trained, perform CPR if the patient becomes unresponsive and is not breathing normally"
+    ],
+    "quick_solutions": [
+      "Primary PCI (coronary angioplasty) is the gold standard reperfusion strategy and must be performed within 90 minutes of first medical contact per 2025 AHA/ACC guidelines",
+      "Dual antiplatelet therapy with aspirin plus a P2Y12 inhibitor (ticagrelor or prasugrel) is standard for minimum 12 months post-MI",
+      "High-intensity statin therapy is initiated immediately post-MI to target LDL below 55 mg/dL",
+      "ACE inhibitors and beta-blockers are started early in hospital to reduce remodeling and mortality",
+      "Cardiac rehabilitation must be offered to all post-MI patients — reduces reinfarction and all-cause mortality"
+    ],
+    "when_to_seek_help": "This is always a medical emergency. Call emergency services the moment symptoms start — every minute of delay destroys myocardium. Time-to-treatment is the single most important determinant of survival.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Emergency Physician / Interventional Cardiologist / Cardiologist"
+  },
+  "failure heart congestive": {
+    "immediate_advice": [
+      "Weigh yourself every morning before eating — a gain of more than 2 kg in 2 days or 3 kg in a week indicates fluid retention and requires urgent medical review",
+      "Restrict fluid intake to 1.5–2 litres per day and sodium to under 2 grams per day",
+      "Sleep with the head elevated at 30–45 degrees using pillows to reduce orthopnea and nocturnal dyspnoea",
+      "Take diuretics as prescribed — never skip doses, and take them in the morning to avoid nighttime urination"
+    ],
+    "quick_solutions": [
+      "Guideline-directed medical therapy includes ACE inhibitor or ARNi (sacubitril/valsartan) + beta-blocker + mineralocorticoid receptor antagonist + SGLT2 inhibitor — all four have mortality benefit in HFrEF",
+      "SGLT2 inhibitors (dapagliflozin, empagliflozin) reduce heart failure hospitalisations in both reduced and preserved ejection fraction",
+      "Device therapy with ICD or CRT is indicated in selected patients with EF below 35% on optimal medical therapy",
+      "Salt restriction combined with diuretic uptitration is the fastest way to relieve acute congestion symptoms",
+      "Regular monitoring of renal function and electrolytes is essential when on diuretics and RAAS inhibitors"
+    ],
+    "when_to_seek_help": "Seek emergency care for sudden severe breathlessness, inability to lie flat, pink frothy sputum, oxygen saturation below 90%, rapid weight gain over 24 hours, or chest pain — these indicate acute decompensated heart failure.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Cardiologist / Heart Failure Specialist"
+  },
+  "failure heart": {
+    "immediate_advice": [
+      "Adhere strictly to all medications — missing even one dose of beta-blocker or ACE inhibitor can worsen haemodynamics",
+      "Daily weight monitoring is essential — alert your physician for any unexplained weight gain exceeding 2 kg",
+      "Limit physical exertion during decompensation but pursue supervised cardiac rehabilitation during stable periods",
+      "Avoid NSAIDs, most calcium channel blockers (except amlodipine), and excessive alcohol — all worsen heart failure"
+    ],
+    "quick_solutions": [
+      "The four pillars of heart failure therapy are ACE inhibitor/ARNi, beta-blocker, MRA, and SGLT2 inhibitor — uptitrate to maximum tolerated doses",
+      "Iron deficiency is present in up to 50% of HF patients and IV ferric carboxymaltose improves symptoms and reduces hospitalizations",
+      "Implantable cardiac defibrillator is indicated in symptomatic HF with EF below 35% to prevent sudden cardiac death",
+      "Diuretic dose should be adjusted based on clinical congestion signs rather than fixed dosing",
+      "Palliative care and advance directives should be discussed early in advanced heart failure"
+    ],
+    "when_to_seek_help": "Seek emergency care for acute breathlessness at rest, chest pain, syncope, severe palpitations, or oxygen saturation below 90% — these indicate haemodynamic compromise requiring immediate hospital intervention.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Cardiologist / Heart Failure Specialist"
+  },
+  "accident cerebrovascular": {
+    "immediate_advice": [
+      "Call emergency services immediately — use the FAST acronym: Face drooping, Arm weakness, Speech difficulty, Time to call emergency",
+      "Note the exact time symptoms began — this determines eligibility for clot-busting thrombolysis (window is 4.5 hours) or thrombectomy",
+      "Do not give food, water, or medication by mouth — swallowing reflex is often impaired post-stroke",
+      "Keep the patient calm, lying slightly on their side if unconscious to protect the airway"
+    ],
+    "quick_solutions": [
+      "IV alteplase (tPA) within 4.5 hours of symptom onset is standard thrombolysis for ischaemic stroke in eligible patients",
+      "Mechanical thrombectomy is indicated for large vessel occlusion strokes within 24 hours of onset at certified stroke centres",
+      "Aspirin 300 mg is given within 48 hours of ischaemic stroke if thrombolysis is not used",
+      "Stroke unit care with multidisciplinary rehabilitation reduces death and dependency by at least 20%",
+      "Secondary prevention includes antiplatelet therapy, statins, antihypertensives, and anticoagulation for AF-related stroke"
+    ],
+    "when_to_seek_help": "This is always a medical emergency. Call emergency services the instant symptoms appear. Every 15 minutes of delay in stroke treatment results in loss of approximately 300 million neurons.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Neurologist / Stroke Specialist / Emergency Physician"
+  },
+  "transient ischemic attack": {
+    "immediate_advice": [
+      "Seek urgent medical evaluation within 24 hours even if symptoms have fully resolved — TIA is a warning sign and stroke risk is highest in the first 48 hours",
+      "Do not drive until medically cleared — driving restrictions apply after TIA in most jurisdictions",
+      "Start aspirin 300 mg immediately if not already on antiplatelets and no haemorrhagic cause is confirmed",
+      "Use the ABCD2 score to assess stroke risk — high-risk patients require same-day evaluation and imaging"
+    ],
+    "quick_solutions": [
+      "Dual antiplatelet therapy with aspirin plus clopidogrel for 21–90 days reduces early stroke risk after high-risk TIA per POINT and CHANCE trials",
+      "MRI brain with diffusion-weighted imaging is preferred over CT to detect acute ischaemia",
+      "Carotid ultrasound or CT angiography to detect significant carotid stenosis — endarterectomy within 2 weeks for 70–99% symptomatic stenosis",
+      "Statin therapy is started immediately regardless of LDL levels",
+      "Anticoagulation with NOAC is initiated promptly if atrial fibrillation is detected as the cause"
+    ],
+    "when_to_seek_help": "Treat every TIA as a stroke emergency. Go to the emergency department immediately even if symptoms resolve completely — the stroke prevention window is narrow and time-sensitive.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Neurologist / Stroke Specialist"
+  },
+  "cardiomyopathy": {
+    "immediate_advice": [
+      "Avoid strenuous exercise and competitive sports until cardiomyopathy type and severity are fully evaluated — sudden cardiac death risk is elevated",
+      "Strictly avoid alcohol in dilated cardiomyopathy — alcohol is directly cardiotoxic and a common reversible cause",
+      "Take all prescribed medications consistently, especially beta-blockers and ACE inhibitors which prevent disease progression",
+      "Genetic counselling and family screening are recommended as many cardiomyopathies are hereditary"
+    ],
+    "quick_solutions": [
+      "Guideline-directed medical therapy for dilated cardiomyopathy follows heart failure guidelines — ACE inhibitor, beta-blocker, MRA, and SGLT2 inhibitor",
+      "ICD implantation for primary prevention of sudden cardiac death in patients with EF below 35% on optimal therapy for at least 3 months",
+      "Hypertrophic cardiomyopathy with outflow obstruction may benefit from mavacamten (myosin inhibitor) per recent FDA approval",
+      "Cardiac MRI is the gold standard imaging for cardiomyopathy characterisation and scar quantification",
+      "Heart transplantation is the definitive treatment for end-stage cardiomyopathy refractory to medical therapy"
+    ],
+    "when_to_seek_help": "Seek emergency care for syncope, presyncope during exertion, sustained palpitations, severe breathlessness at rest, or chest pain — these may represent life-threatening arrhythmias or acute decompensation.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Cardiologist / Electrophysiologist / Heart Failure Specialist"
+  },
+  "peripheral vascular disease": {
+    "immediate_advice": [
+      "Stop smoking immediately — smoking is the single most important modifiable risk factor and dramatically accelerates disease progression",
+      "Inspect feet and legs daily for wounds, blisters, or colour changes — reduced sensation means injuries go unnoticed",
+      "Walk regularly — supervised exercise therapy improves walking distance by 50–200% and is first-line treatment for claudication",
+      "Never apply heat to ischaemic limbs — impaired sensation means burns occur without warning"
+    ],
+    "quick_solutions": [
+      "Antiplatelet therapy with aspirin or clopidogrel reduces cardiovascular events in all PAD patients",
+      "High-intensity statin therapy is mandatory — reduces major adverse limb events and cardiovascular mortality",
+      "Rivaroxaban 2.5 mg twice daily plus aspirin reduces major adverse limb events per COMPASS trial evidence",
+      "Revascularization (angioplasty, stenting, or bypass surgery) is considered for lifestyle-limiting claudication or critical limb ischaemia",
+      "Ankle-brachial index (ABI) below 0.9 confirms diagnosis — values below 0.4 indicate critical ischaemia requiring urgent intervention"
+    ],
+    "when_to_seek_help": "Seek emergency care for sudden onset severe limb pain, pallor, pulselessness, paralysis, or coldness — these are the classic 6 Ps of acute limb ischaemia, which is a surgical emergency requiring revascularisation within hours.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Vascular Surgeon / Interventional Radiologist / Cardiologist"
+  },
+  "deep vein thrombosis": {
+    "immediate_advice": [
+      "Do not massage or rub the affected limb — this can dislodge the clot and cause pulmonary embolism",
+      "Keep the leg elevated above heart level when resting to reduce swelling and pain",
+      "Seek medical evaluation promptly for a swollen, red, warm, or painful limb — compression ultrasound confirms diagnosis",
+      "Begin anticoagulation as soon as DVT is confirmed — do not delay pending further tests"
+    ],
+    "quick_solutions": [
+      "Direct oral anticoagulants (DOACs) — rivaroxaban or apixaban — are first-line treatment, preferred over low molecular weight heparin plus warfarin",
+      "Minimum treatment duration is 3 months for provoked DVT; 6–12 months or indefinite for unprovoked or recurrent DVT",
+      "Compression stockings reduce post-thrombotic syndrome symptoms and should be worn for at least 2 years",
+      "Inferior vena cava filter is considered only if anticoagulation is absolutely contraindicated",
+      "Screening for thrombophilia and malignancy should be considered in unprovoked DVT, especially in younger patients"
+    ],
+    "when_to_seek_help": "Seek emergency care immediately for sudden onset breathlessness, chest pain, haemoptysis, rapid heart rate, or drop in blood pressure — these suggest pulmonary embolism, a potentially fatal complication of DVT.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Haematologist / Vascular Medicine Specialist / General Physician"
+  },
+  "chronic obstructive airway disease": {
+    "immediate_advice": [
+      "Stop smoking immediately — it is the single most effective intervention and slows disease progression regardless of disease stage",
+      "Use short-acting bronchodilator (salbutamol inhaler) for rescue relief of acute breathlessness",
+      "Ensure correct inhaler technique — poor technique is the most common reason for treatment failure in COPD",
+      "Get annual influenza vaccine and pneumococcal vaccine — respiratory infections are the leading cause of exacerbations"
+    ],
+    "quick_solutions": [
+      "Long-acting bronchodilators (LAMA or LABA) are the cornerstone of maintenance therapy per GOLD 2024 guidelines",
+      "Triple therapy (LAMA + LABA + ICS) is indicated in patients with frequent exacerbations or eosinophil count above 300",
+      "Pulmonary rehabilitation with supervised exercise training reduces hospitalizations and improves quality of life significantly",
+      "Long-term oxygen therapy for more than 15 hours per day is indicated when resting SpO2 is at or below 88%",
+      "Roflumilast (PDE4 inhibitor) reduces exacerbations in severe COPD with chronic bronchitis phenotype"
+    ],
+    "when_to_seek_help": "Seek emergency care for acute worsening of breathlessness beyond normal variation, cyanosis, new confusion or drowsiness, SpO2 below 90%, or inability to complete sentences — these indicate acute exacerbation requiring hospital treatment.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Pulmonologist / Respiratory Physician"
+  },
+  "pneumonia": {
+    "immediate_advice": [
+      "Seek medical evaluation promptly — pneumonia requires clinical assessment and may need antibiotics, hospitalisation, or oxygen support",
+      "Rest, stay well hydrated, and use paracetamol or ibuprofen for fever and pleuritic chest pain relief",
+      "Sit upright — this position maximises diaphragmatic excursion and ventilation efficiency",
+      "Monitor oxygen saturation with a pulse oximeter if available — sustained readings below 94% require urgent review"
+    ],
+    "quick_solutions": [
+      "Antibiotics are required for bacterial pneumonia — amoxicillin is first-line for community-acquired pneumonia in most patients",
+      "Complete the full antibiotic course even if symptoms improve within 2–3 days",
+      "Annual influenza vaccine and pneumococcal vaccine significantly reduce pneumonia risk in high-risk groups",
+      "CURB-65 score guides severity assessment and hospital admission decisions",
+      "Follow-up chest X-ray at 6–8 weeks is recommended in smokers and older adults to confirm resolution and exclude underlying malignancy"
+    ],
+    "when_to_seek_help": "Seek emergency care for severe breathlessness, oxygen saturation below 94%, confusion, very high fever above 40°C, rapid heart rate above 120/min, blue lips, or inability to maintain hydration — these indicate severe or complicated pneumonia.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Pulmonologist / Infectious Disease Specialist / General Physician"
+  },
+  "asthma": {
+    "immediate_advice": [
+      "Use the reliever inhaler (salbutamol/albuterol) at the first sign of symptoms — do not wait for symptoms to worsen",
+      "Identify and avoid personal triggers: allergens, exercise, cold air, smoke, strong fumes, or aspirin if sensitive",
+      "Have a written asthma action plan from your doctor and follow it during worsening symptoms",
+      "Never run out of reliever medication — always carry it and ensure it is not expired"
+    ],
+    "quick_solutions": [
+      "Inhaled corticosteroids (ICS) are the cornerstone of maintenance therapy and must be taken daily even when well",
+      "GINA 2024 guidelines no longer recommend SABA-only treatment — all persistent asthma requires ICS-containing therapy",
+      "ICS-formoterol as both maintenance and reliever therapy (MART regimen) reduces exacerbations versus fixed-dose regimens",
+      "Monoclonal antibody biologics (dupilumab, mepolizumab, benralizumab) are available for severe eosinophilic or allergic asthma",
+      "Spirometry with bronchodilator reversibility should be performed to confirm diagnosis — improvement of FEV1 by 12% and 200 mL confirms asthma"
+    ],
+    "when_to_seek_help": "Call emergency services for severe attack: unable to speak in full sentences, reliever inhaler not helping after 10 puffs, lips or fingernails turning blue, SpO2 below 92%, or peak flow below 33% of best — this is a life-threatening attack.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Pulmonologist / Allergist / Respiratory Physician"
+  },
+  "bronchitis": {
+    "immediate_advice": [
+      "Acute bronchitis is most commonly viral — antibiotics are not indicated in most cases and should not be demanded",
+      "Stay well hydrated to thin secretions and make coughing more productive",
+      "Use honey (1–2 teaspoons) or lozenges for cough relief — evidence supports honey as effective as dextromethorphan for cough suppression",
+      "Avoid smoking and secondhand smoke — both worsen airway inflammation and delay recovery"
+    ],
+    "quick_solutions": [
+      "Inhaled salbutamol may help relieve bronchospasm-related wheeze in acute bronchitis",
+      "Antibiotics are reserved for patients with clinical signs of bacterial superinfection: purulent sputum with fever, elderly, or immunocompromised",
+      "Chronic bronchitis requires smoking cessation plus inhaled bronchodilators as primary management",
+      "A persistent cough lasting more than 3 weeks warrants investigation to exclude pneumonia, pertussis, or TB",
+      "Steam inhalation and warm fluids help symptom relief — no evidence for most OTC cough medicines"
+    ],
+    "when_to_seek_help": "Seek medical review if symptoms worsen after 5–7 days, fever exceeds 38.5°C, breathing becomes laboured, coughing up blood, or significant pre-existing lung disease is present — these suggest complication or alternative diagnosis.",
+    "severity_level": "mild",
+    "specialist_recommendation": "General Physician / Pulmonologist (if recurrent or chronic)"
+  },
+  "embolism pulmonary": {
+    "immediate_advice": [
+      "Call emergency services immediately — pulmonary embolism can be rapidly fatal without prompt anticoagulation and supportive care",
+      "Keep the patient calm and still — exertion increases oxygen demand in an already compromised cardiopulmonary system",
+      "Sit upright to optimise ventilation if breathless — avoid lying flat",
+      "Do not give food or water — emergency procedures including thrombolysis may be needed"
+    ],
+    "quick_solutions": [
+      "Immediate anticoagulation with LMWH, unfractionated heparin, or DOAC (rivaroxaban or apixaban) is the cornerstone of treatment",
+      "CT pulmonary angiography (CTPA) is the diagnostic gold standard — performed urgently in suspected PE",
+      "Systemic thrombolysis with alteplase is indicated for massive PE with haemodynamic compromise (SBP below 90 mmHg)",
+      "Anticoagulation continued for minimum 3 months; extended therapy for unprovoked PE or high recurrence risk",
+      "Inferior vena cava filter is rarely indicated and only when anticoagulation is absolutely contraindicated"
+    ],
+    "when_to_seek_help": "This is always a medical emergency. Any suspected PE with breathlessness, chest pain, haemoptysis, or syncope requires immediate emergency evaluation — do not wait to see if it improves.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Emergency Physician / Pulmonologist / Haematologist"
+  },
+  "influenza": {
+    "immediate_advice": [
+      "Rest at home and stay isolated to prevent transmission — influenza is highly contagious via respiratory droplets",
+      "Maintain high fluid intake to replace losses from fever and sweating",
+      "Use paracetamol or ibuprofen for fever, myalgia, and headache — avoid aspirin in children due to Reye syndrome risk",
+      "Annual influenza vaccination is the most effective preventive measure — recommended for everyone above 6 months of age"
+    ],
+    "quick_solutions": [
+      "Oseltamivir (Tamiflu) reduces illness duration by 1–2 days if started within 48 hours of symptom onset — most beneficial in high-risk patients",
+      "Antivirals are strongly recommended for hospitalised patients, those over 65, pregnant women, immunocompromised individuals, and those with chronic diseases",
+      "Antibiotics are not effective against influenza — prescribing them promotes resistance without benefit",
+      "Bed rest, adequate nutrition, and symptomatic management are sufficient for healthy adults with mild-to-moderate illness",
+      "Influenza vaccination reduces hospitalisation risk by 40–60% in most seasons"
+    ],
+    "when_to_seek_help": "Seek emergency care for difficulty breathing, persistent chest pain, confusion, severe vomiting preventing oral intake, signs of dehydration, or worsening after initial improvement — these suggest severe influenza or secondary bacterial pneumonia.",
+    "severity_level": "mild",
+    "specialist_recommendation": "General Physician / Infectious Disease Specialist (severe cases)"
+  },
+  "upper respiratory infection": {
+    "immediate_advice": [
+      "Rest adequately — most URIs are self-limiting viral infections that resolve within 7–10 days",
+      "Stay hydrated with warm fluids including honey and lemon — helps soothe throat and thin secretions",
+      "Practice strict hand hygiene and avoid close contact with others to prevent spread",
+      "Saline nasal sprays help relieve nasal congestion and are safe for all ages"
+    ],
+    "quick_solutions": [
+      "Antibiotics are not indicated for viral URI — inappropriate use accelerates antibiotic resistance",
+      "Zinc lozenges taken within 24 hours of symptom onset modestly reduce duration per meta-analysis evidence",
+      "Paracetamol or ibuprofen for fever and sore throat — both are equally effective for symptom relief",
+      "Decongestants (pseudoephedrine or oxymetazoline nasal spray) provide short-term relief — limit nasal spray to 3 days maximum to avoid rebound congestion",
+      "Antibiotics are indicated only if symptoms persist beyond 10 days, worsen after 5–7 days, or bacterial sinusitis, otitis media, or streptococcal pharyngitis is confirmed"
+    ],
+    "when_to_seek_help": "Seek medical review for symptoms lasting more than 10 days without improvement, fever above 39.5°C, severe unilateral facial pain, throat swelling preventing swallowing, or difficulty breathing — these suggest bacterial complications.",
+    "severity_level": "mild",
+    "specialist_recommendation": "General Physician / ENT Specialist (if recurrent)"
+  },
+  "diabetes": {
+    "immediate_advice": [
+      "Monitor blood glucose regularly — fasting target is 4–7 mmol/L and post-meal target is below 8.5–10 mmol/L for most patients",
+      "Never skip meals with insulin or sulfonylureas — this causes hypoglycaemia which can be life-threatening",
+      "Carry fast-acting glucose (glucose tablets, juice, or sugary drink) at all times for hypoglycaemia episodes",
+      "Inspect feet daily for cuts, blisters, or sores — diabetic neuropathy masks pain so injuries can go undetected"
+    ],
+    "quick_solutions": [
+      "Metformin remains first-line oral therapy for type 2 diabetes — cheap, effective, and cardioprotective",
+      "SGLT2 inhibitors and GLP-1 receptor agonists are preferred add-on therapy in patients with established cardiovascular disease, heart failure, or chronic kidney disease",
+      "HbA1c target is below 7% (53 mmol/mol) for most patients — individualised to avoid hypoglycaemia in elderly or frail patients",
+      "Annual screening for retinopathy, nephropathy, neuropathy, and foot complications is mandatory",
+      "Structured diabetes education programmes significantly improve glycaemic control and reduce complications"
+    ],
+    "when_to_seek_help": "Seek emergency care for blood glucose below 3.5 mmol/L with confusion or loss of consciousness (severe hypoglycaemia), or glucose above 20 mmol/L with vomiting and fruity breath (diabetic ketoacidosis) — both are life-threatening emergencies.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Endocrinologist / Diabetologist / General Physician"
+  },
+  "obesity": {
+    "immediate_advice": [
+      "Begin with realistic, sustainable dietary changes — reduce ultra-processed food, sugary drinks, and portion sizes rather than extreme caloric restriction",
+      "Aim for at least 150 minutes of moderate aerobic activity per week — even walking has significant metabolic benefits",
+      "Prioritise sleep — sleep deprivation of less than 6 hours per night increases ghrelin and reduces leptin, driving increased appetite",
+      "Track dietary intake honestly — most people significantly underestimate caloric intake"
+    ],
+    "quick_solutions": [
+      "GLP-1 receptor agonists (semaglutide, liraglutide) achieve 10–15% body weight reduction and are now first-line pharmacotherapy for obesity per NICE and AHA guidelines",
+      "Tirzepatide (GIP/GLP-1 dual agonist) achieves up to 22% weight loss and is the most effective approved pharmacotherapy as of 2024",
+      "Bariatric surgery (sleeve gastrectomy or Roux-en-Y gastric bypass) is indicated for BMI above 40, or above 35 with significant comorbidities, and achieves durable 25–35% weight loss",
+      "Structured behavioural weight loss programmes combining diet, exercise, and psychological support produce superior long-term outcomes versus any single intervention",
+      "Obesity management reduces risk of type 2 diabetes, hypertension, sleep apnoea, and certain cancers"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for chest pain, severe breathlessness with minimal exertion, new snoring with witnessed apnoeas, or sudden joint pain — obesity significantly increases risk of cardiac, respiratory, and musculoskeletal complications.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Endocrinologist / Bariatric Surgeon / Dietitian / General Physician"
+  },
+  "hypercholesterolemia": {
+    "immediate_advice": [
+      "Reduce saturated fat intake (red meat, full-fat dairy, coconut oil) and eliminate trans fats completely",
+      "Increase soluble fibre intake from oats, legumes, and fruits — 10 grams of soluble fibre daily reduces LDL by approximately 5%",
+      "Regular aerobic exercise raises HDL and modestly lowers LDL and triglycerides",
+      "Avoid smoking — it dramatically lowers HDL and accelerates atherosclerosis independently of LDL"
+    ],
+    "quick_solutions": [
+      "High-intensity statins (atorvastatin 40–80 mg or rosuvastatin 20–40 mg) are first-line for patients with high cardiovascular risk or established CVD",
+      "Ezetimibe adds 15–20% additional LDL reduction on top of statin therapy and is recommended when statin alone is insufficient",
+      "PCSK9 inhibitors (evolocumab, alirocumab) reduce LDL by 50–60% and are indicated for familial hypercholesterolaemia or very high CVD risk patients not at target on statin plus ezetimibe",
+      "LDL target is below 55 mg/dL for very high risk patients per ESC 2024 dyslipidaemia guidelines",
+      "Plant sterols and stanols (2 grams per day) in fortified foods reduce LDL by 5–10% as adjunctive lifestyle intervention"
+    ],
+    "when_to_seek_help": "High cholesterol itself is symptom-free — seek medical review if you have not had a lipid panel in the last 5 years, have a family history of premature heart disease, or already have cardiovascular disease requiring target-driven treatment.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Cardiologist / Lipidologist / General Physician"
+  },
+  "hyperlipidemia": {
+    "immediate_advice": [
+      "Follow a heart-healthy diet — limit saturated and trans fats, increase omega-3 rich fish, nuts, and olive oil",
+      "Achieve and maintain a healthy weight — even 5–10% weight loss significantly improves lipid profile",
+      "Engage in regular moderate aerobic exercise — at least 30 minutes most days of the week",
+      "Limit alcohol — it significantly raises triglycerides and is a common underrecognised cause of hypertriglyceridaemia"
+    ],
+    "quick_solutions": [
+      "Statins are the primary therapy for elevated LDL-C and reduced cardiovascular events across all risk categories",
+      "Fibrates are indicated for severe hypertriglyceridaemia (above 5 mmol/L) to reduce pancreatitis risk",
+      "Combination therapy with statin plus ezetimibe or PCSK9 inhibitor is used when LDL targets are not met on statin alone",
+      "Omega-3 fatty acids at high dose (4 grams/day icosapentaenoic acid) reduce cardiovascular events in patients with elevated triglycerides already on statins per REDUCE-IT trial",
+      "Secondary causes of hyperlipidaemia — hypothyroidism, diabetes, nephrotic syndrome, drugs — must be identified and treated"
+    ],
+    "when_to_seek_help": "Hyperlipidaemia is a silent risk factor. Seek medical review for routine lipid screening if you are above 35 years, have a family history of early CVD, or currently have cardiovascular disease requiring active management.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Cardiologist / Lipidologist / General Physician"
+  },
+  "hypothyroidism": {
+    "immediate_advice": [
+      "Take levothyroxine on an empty stomach 30–60 minutes before breakfast — food, calcium, and iron supplements interfere with absorption",
+      "Never skip thyroid medication — abrupt cessation can cause myxoedema coma in severe cases",
+      "Allow 6–8 weeks before assessing effect of any dose change — TSH takes time to equilibrate after dose adjustment",
+      "Inform all prescribers about thyroid status — many medications interact with levothyroxine"
+    ],
+    "quick_solutions": [
+      "Levothyroxine (T4) is the treatment of choice — starting dose 25–50 mcg/day titrated to normalise TSH",
+      "Target TSH is 0.5–2.5 mIU/L for most patients; higher targets (1–4 mIU/L) are acceptable in elderly patients to avoid over-replacement",
+      "TSH should be rechecked 6–8 weeks after any dose change and annually once stable",
+      "Some patients report persistent symptoms on T4 alone and may benefit from addition of small doses of liothyronine (T3) under specialist guidance",
+      "During pregnancy, TSH targets are stricter (below 2.5 mIU/L in first trimester) and dose usually increases by 25–30%"
+    ],
+    "when_to_seek_help": "Seek emergency care for myxoedema coma — characterised by extreme cold intolerance, profound confusion, very low body temperature, and decreased consciousness — this is a life-threatening emergency requiring IV thyroid hormone.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Endocrinologist / General Physician"
+  },
+  "gout": {
+    "immediate_advice": [
+      "Rest the affected joint and elevate it — avoid any pressure or weight bearing on the inflamed joint",
+      "Apply ice wrapped in cloth to the swollen joint for 20–30 minutes several times daily to reduce pain and inflammation",
+      "Stay well hydrated with at least 2–3 litres of water daily — dehydration concentrates uric acid and worsens attacks",
+      "Avoid alcohol especially beer and spirits, and purine-rich foods like red meat, organ meat, and shellfish during attacks"
+    ],
+    "quick_solutions": [
+      "NSAIDs (indomethacin, naproxen) are first-line for acute gout attacks and should be started immediately at maximum doses",
+      "Colchicine (0.5–1 mg twice daily for 3–5 days) is an effective alternative for acute attacks, especially when NSAIDs are contraindicated",
+      "Oral prednisolone (30–35 mg for 5 days) is used when both NSAIDs and colchicine are contraindicated",
+      "Allopurinol or febuxostat are urate-lowering therapies started at least 2–4 weeks after the acute attack resolves — target serum uric acid below 360 mmol/L (6 mg/dL)",
+      "Allopurinol must be started at a low dose (50–100 mg/day) and uptitrated slowly to avoid precipitating acute attacks"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for fever with joint inflammation (to exclude septic arthritis), first-ever gout attack to confirm diagnosis, or polyarticular gout with systemic features which requires more aggressive management.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Rheumatologist / General Physician"
+  },
+  "chronic kidney failure": {
+    "immediate_advice": [
+      "Restrict protein intake to 0.8 g/kg/day in non-dialysis CKD to slow progression — specialist dietitian guidance is essential",
+      "Monitor and control blood pressure rigorously — target below 130/80 mmHg; ACE inhibitors or ARBs are preferred as they have additional nephroprotective effects",
+      "Avoid nephrotoxic drugs: NSAIDs, aminoglycosides, and iodinated contrast without pre-hydration",
+      "Limit potassium and phosphate intake as CKD impairs excretion of both"
+    ],
+    "quick_solutions": [
+      "SGLT2 inhibitors (dapagliflozin, canagliflozin) slow CKD progression independent of diabetes and are now standard of care per KDIGO 2024 guidelines",
+      "Finerenone (non-steroidal MRA) reduces CKD progression and cardiovascular events in diabetic CKD",
+      "Anaemia of CKD is treated with erythropoiesis-stimulating agents and IV iron — target haemoglobin 100–120 g/L",
+      "Phosphate binders and active vitamin D analogues manage metabolic bone disease in advanced CKD",
+      "Regular nephrology review with GFR monitoring determines timing of renal replacement therapy preparation"
+    ],
+    "when_to_seek_help": "Seek emergency care for severe hyperkalemia (K+ above 6.5 mmol/L) with ECG changes, acute pulmonary oedema, severe uraemic symptoms (confusion, vomiting, pericarditis), or sudden significant drop in urine output.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Nephrologist"
+  },
+  "kidney failure acute": {
+    "immediate_advice": [
+      "Stop all potentially nephrotoxic medications immediately — NSAIDs, aminoglycosides, ACE inhibitors, ARBs, and contrast agents are common culprits",
+      "Fluid status assessment is critical — AKI can result from dehydration (pre-renal) or fluid overload (post-renal or intrinsic) requiring opposite management",
+      "Strict monitoring of urine output — oliguria (below 0.5 mL/kg/hour) requires urgent review",
+      "Dietary potassium restriction as hyperkalaemia is an immediately life-threatening complication of AKI"
+    ],
+    "quick_solutions": [
+      "Identify and treat the underlying cause — most common are dehydration, sepsis, nephrotoxin exposure, or urinary obstruction",
+      "IV fluid resuscitation for pre-renal AKI — crystalloid (normal saline or balanced solutions) preferred over colloid",
+      "Emergency dialysis is indicated for refractory hyperkalaemia, severe metabolic acidosis, fluid overload unresponsive to diuretics, or uraemic encephalopathy",
+      "KDIGO AKI staging guides management intensity — stage 3 AKI requires nephrology consultation",
+      "Most AKI is reversible if the cause is identified and treated promptly — long-term follow-up is needed as it increases CKD risk"
+    ],
+    "when_to_seek_help": "AKI is a medical emergency requiring hospitalisation. Seek emergency care for sudden reduction in urine output, swelling of legs and face, confusion, or difficulty breathing associated with suspected kidney failure.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Nephrologist / Emergency Physician"
+  },
+  "infection urinary tract": {
+    "immediate_advice": [
+      "Drink at least 2–3 litres of water daily to flush bacteria from the urinary tract",
+      "Do not delay urination — holding urine allows bacterial proliferation in the bladder",
+      "Wipe front to back after toileting — this prevents faecal bacteria from reaching the urethra",
+      "Avoid irritants such as bubble baths, scented hygiene products, and tight synthetic underwear"
+    ],
+    "quick_solutions": [
+      "Uncomplicated cystitis in women is treated with trimethoprim (7 days), nitrofurantoin (5 days), or fosfomycin (single dose) — antibiotic choice guided by local resistance patterns",
+      "Fluoroquinolones are no longer recommended as first-line for uncomplicated UTI due to resistance and adverse effects per current NICE and EAU guidelines",
+      "Recurrent UTI (3 or more per year) warrants investigation and prophylactic strategies including low-dose antibiotic prophylaxis or vaginal oestrogen in post-menopausal women",
+      "Cranberry products modestly reduce UTI recurrence in women but are not effective treatment for active infection",
+      "Febrile UTI (pyelonephritis) requires 10–14 days of antibiotics — oral ciprofloxacin or co-amoxiclav, with hospitalisation for severe cases"
+    ],
+    "when_to_seek_help": "Seek urgent medical care for high fever above 38.5°C, rigors, loin pain, nausea and vomiting with UTI symptoms (suggests pyelonephritis), or UTI in men, pregnant women, children, diabetics, or immunocompromised patients — these require careful assessment.",
+    "severity_level": "mild",
+    "specialist_recommendation": "General Physician / Urologist (recurrent cases)"
+  },
+  "insufficiency renal": {
+    "immediate_advice": [
+      "Maintain strict fluid balance monitoring — record daily intake and urine output",
+      "Restrict dietary sodium to under 2 grams per day to reduce fluid retention and blood pressure",
+      "Avoid all nephrotoxic drugs including NSAIDs, aminoglycoside antibiotics, and iodinated contrast without proper hydration",
+      "Monitor and restrict dietary potassium and phosphate as kidneys can no longer excrete them adequately"
+    ],
+    "quick_solutions": [
+      "Blood pressure control below 130/80 mmHg using ACE inhibitors or ARBs as preferred agents to reduce proteinuria and slow progression",
+      "SGLT2 inhibitors are nephroprotective across CKD stages and reduce risk of progression to kidney failure",
+      "Management of anaemia, metabolic acidosis, hyperphosphataemia, and secondary hyperparathyroidism are all integral to CKD care",
+      "Dialysis preparation including arteriovenous fistula creation or peritoneal dialysis catheter should begin when GFR approaches 15 mL/min/1.73m2",
+      "Renal transplantation offers superior outcomes to dialysis and should be considered early for eligible patients"
+    ],
+    "when_to_seek_help": "Seek emergency care for sudden severe breathlessness (fluid overload), chest pain, muscle weakness or irregular heartbeat from hyperkalaemia, or confusion — these are life-threatening manifestations of advanced renal insufficiency.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Nephrologist"
+  },
+  "gastroesophageal reflux disease": {
+    "immediate_advice": [
+      "Elevate the head of the bed by 15–20 cm using bed risers — this uses gravity to reduce nocturnal acid reflux",
+      "Avoid eating within 3 hours of bedtime — lying down immediately after meals significantly worsens reflux",
+      "Identify and eliminate personal dietary triggers: coffee, alcohol, chocolate, fatty foods, citrus, tomatoes, and mint",
+      "Lose weight if overweight — even modest weight loss of 5–10% significantly reduces GERD symptoms"
+    ],
+    "quick_solutions": [
+      "Proton pump inhibitors (PPIs — omeprazole, lansoprazole, pantoprazole) are the most effective pharmacological treatment — take 30 minutes before the largest meal",
+      "H2 receptor antagonists (famotidine) are an alternative for mild-to-moderate GERD or as on-demand therapy",
+      "PPIs should be used at the lowest effective dose for the shortest duration necessary — long-term use above 1 year should be reassessed",
+      "Endoscopy is indicated for alarm symptoms: dysphagia, unintended weight loss, anaemia, vomiting, or persistent symptoms despite 4–8 weeks of PPI therapy",
+      "Barrett's oesophagus (metaplastic complication of chronic GERD) requires endoscopic surveillance and aggressive acid suppression"
+    ],
+    "when_to_seek_help": "Seek urgent medical evaluation for difficulty swallowing, pain on swallowing, unintended weight loss, vomiting blood, black stools, or anaemia — these are alarm symptoms that require urgent endoscopy to exclude malignancy.",
+    "severity_level": "mild",
+    "specialist_recommendation": "Gastroenterologist / General Physician"
+  },
+  "cirrhosis": {
+    "immediate_advice": [
+      "Abstain completely from alcohol — even minimal alcohol accelerates disease progression in all causes of cirrhosis",
+      "Restrict dietary sodium to under 2 grams per day to prevent or reduce ascites",
+      "Avoid NSAIDs, aminoglycosides, and unnecessary medications metabolised by the liver",
+      "Screen for oesophageal varices if not done recently — bleeding varices are a major cause of mortality in cirrhosis"
+    ],
+    "quick_solutions": [
+      "Propranolol or carvedilol (non-selective beta-blockers) reduce portal hypertension and prevent first variceal bleed in medium or large varices",
+      "Spironolactone plus furosemide is standard treatment for ascites — response monitored by daily weight",
+      "Antibiotic prophylaxis with norfloxacin is indicated for patients with low protein ascites to prevent spontaneous bacterial peritonitis (SBP)",
+      "HCC surveillance with 6-monthly liver ultrasound and AFP is mandatory as cirrhosis carries a 1–5% annual risk of hepatocellular carcinoma",
+      "Liver transplantation is the only curative option for decompensated cirrhosis — referral should be considered early"
+    ],
+    "when_to_seek_help": "Seek emergency care immediately for vomiting blood or black tarry stools (variceal bleeding), sudden abdominal pain with fever (SBP), new or worsening confusion (hepatic encephalopathy), or severe jaundice — all are life-threatening complications.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Hepatologist / Gastroenterologist"
+  },
+  "hepatitis C": {
+    "immediate_advice": [
+      "Do not share needles, syringes, razors, toothbrushes, or any item that could carry blood",
+      "Alcohol must be avoided completely — it dramatically accelerates hepatitis C-related liver fibrosis",
+      "Inform sexual partners — sexual transmission is low risk but possible, especially with multiple partners or concomitant HIV",
+      "Get tested for HIV and hepatitis B — co-infections are common and alter management significantly"
+    ],
+    "quick_solutions": [
+      "Direct-acting antivirals (DAAs) — sofosbuvir-based regimens such as sofosbuvir/velpatasvir — achieve sustained virological response (cure) in over 95% of patients within 8–12 weeks",
+      "Treatment is now recommended for all HCV-infected patients regardless of fibrosis stage per EASL 2024 guidelines",
+      "Cure of HCV substantially reduces risk of cirrhosis, hepatocellular carcinoma, and liver-related mortality",
+      "HCV is not preventable by vaccine — all harm reduction strategies focus on breaking transmission chains",
+      "Post-treatment surveillance for HCC continues for patients who had advanced fibrosis even after successful cure"
+    ],
+    "when_to_seek_help": "Seek urgent hepatology review if not yet assessed for treatment — all HCV patients are now eligible for curative therapy. Seek emergency care for signs of decompensated cirrhosis: jaundice, ascites, bleeding, or confusion.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Hepatologist / Infectious Disease Specialist"
+  },
+  "hepatitis B": {
+    "immediate_advice": [
+      "Do not share needles, personal hygiene items, or have unprotected sex with unvaccinated partners",
+      "Abstain completely from alcohol — it accelerates HBV-related liver damage",
+      "Family members and close contacts should be tested and vaccinated — HBV vaccine is highly effective and provides lifelong protection",
+      "Newborns of HBsAg-positive mothers must receive HBV vaccine plus HBIG within 12 hours of birth"
+    ],
+    "quick_solutions": [
+      "Tenofovir disoproxil fumarate (TDF) or entecavir are first-line antiviral treatments with high efficacy and low resistance rates",
+      "Not all patients require treatment — treatment is indicated based on HBV DNA level, ALT, and liver fibrosis stage per EASL 2024 guidelines",
+      "HCC surveillance with 6-monthly ultrasound is mandatory in all cirrhotic HBV patients and high-risk non-cirrhotic carriers",
+      "Pegylated interferon alpha-2a offers a finite (48-week) treatment course with chance of HBsAg seroconversion but has more side effects",
+      "Treatment is typically lifelong with nucleos(t)ide analogues — stopping prematurely causes viral rebound"
+    ],
+    "when_to_seek_help": "Seek urgent hepatology review if newly diagnosed with hepatitis B. Seek emergency care for signs of acute hepatic failure: severe jaundice, confusion, bleeding tendency, or swollen abdomen — acute HBV can rarely cause fulminant liver failure.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Hepatologist / Infectious Disease Specialist"
+  },
+  "pancreatitis": {
+    "immediate_advice": [
+      "Seek immediate hospital evaluation — pancreatitis severity ranges from mild to life-threatening and cannot be safely managed at home",
+      "Stop all food and oral intake until medically assessed — fasting reduces pancreatic stimulation and pain",
+      "Avoid alcohol completely — gallstones and alcohol are the two most common causes accounting for over 80% of cases",
+      "Do not take NSAIDs or opioids without medical direction — pain management requires medical assessment"
+    ],
+    "quick_solutions": [
+      "IV fluid resuscitation with Ringer's lactate (preferred over normal saline) at 250–500 mL/hour is the cornerstone of early pancreatitis management",
+      "Early enteral nutrition (within 24–48 hours via nasogastric tube if tolerated orally) improves outcomes in severe pancreatitis — total parenteral nutrition is a last resort",
+      "ERCP with sphincterotomy is indicated within 24–72 hours for pancreatitis caused by an obstructing common bile duct stone",
+      "Cholecystectomy is recommended during the same admission for mild gallstone pancreatitis to prevent recurrence",
+      "CT abdomen with contrast is performed at 48–72 hours in moderate-severe cases to assess for necrosis"
+    ],
+    "when_to_seek_help": "This always requires emergency medical evaluation. Any abdominal pain radiating to the back with nausea, vomiting, or fever after alcohol or a fatty meal should be assessed in the emergency department immediately.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Gastroenterologist / General Surgeon"
+  },
+  "hernia": {
+    "immediate_advice": [
+      "Avoid heavy lifting and straining — increased intra-abdominal pressure worsens hernia and risks strangulation",
+      "Maintain a healthy weight — obesity significantly increases intra-abdominal pressure and hernia recurrence risk",
+      "Treat constipation aggressively with dietary fibre and adequate hydration — straining at stool is a major precipitant",
+      "A truss (supportive garment) provides temporary symptom relief in reducible hernias awaiting surgery but does not treat the underlying defect"
+    ],
+    "quick_solutions": [
+      "Surgical repair is the only definitive treatment — watchful waiting is acceptable only for truly asymptomatic inguinal hernias in men",
+      "Laparoscopic mesh repair offers faster recovery, less post-operative pain, and lower recurrence rate than open repair for bilateral or recurrent hernias",
+      "Open tension-free mesh repair (Lichtenstein technique) remains the most widely performed operation and has excellent long-term outcomes",
+      "Emergency surgery is required for strangulated or incarcerated hernias — viability of bowel determines morbidity",
+      "Hiatus hernias are typically managed medically with PPIs unless very large or causing severe reflux"
+    ],
+    "when_to_seek_help": "Seek emergency care immediately for a hernia that becomes suddenly painful, hard, cannot be pushed back in, is associated with vomiting or inability to pass stool — these signs suggest strangulation which is a surgical emergency.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "General Surgeon"
+  },
+  "cholelithiasis / biliary calculus": {
+    "immediate_advice": [
+      "Avoid fatty, fried, and high-cholesterol foods — these trigger gallbladder contraction and precipitate biliary colic",
+      "Eat smaller, more frequent meals rather than large meals — large meals cause more intense gallbladder stimulation",
+      "Maintain a healthy weight through gradual weight loss — rapid weight loss paradoxically increases gallstone formation",
+      "Stay hydrated with adequate fluid intake — dehydration concentrates bile and promotes stone formation"
+    ],
+    "quick_solutions": [
+      "Laparoscopic cholecystectomy is the gold standard treatment for symptomatic gallstones — curative with a short recovery period",
+      "Ursodeoxycholic acid (UDCA) can dissolve small cholesterol stones in patients unfit for surgery — requires 6–24 months and stones recur in 50% after stopping",
+      "ERCP is indicated for common bile duct stones — performed before or after cholecystectomy",
+      "Asymptomatic gallstones in healthy individuals do not require surgery — watchful waiting is appropriate",
+      "Cholecystectomy should not be delayed beyond 1 week in acute cholecystitis to reduce morbidity and mortality"
+    ],
+    "when_to_seek_help": "Seek emergency care for severe right upper quadrant or epigastric pain lasting more than 6 hours, fever and jaundice with right upper quadrant pain (Charcot's triad suggesting cholangitis), or pain with rigors — these suggest complications requiring urgent intervention.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "General Surgeon / Gastroenterologist"
+  },
+  "gastritis": {
+    "immediate_advice": [
+      "Avoid NSAIDs, aspirin, and steroids — these are the most common causes of drug-induced gastritis",
+      "Eliminate alcohol and smoking — both damage the gastric mucosal barrier and impair healing",
+      "Eat smaller, more frequent meals and avoid eating less than 3 hours before bedtime",
+      "Avoid spicy foods, acidic foods, and caffeine during symptomatic periods"
+    ],
+    "quick_solutions": [
+      "Test for H. pylori infection — detected in over 70% of gastritis cases; eradication with triple therapy (PPI + clarithromycin + amoxicillin for 14 days) cures the underlying cause",
+      "PPIs (omeprazole, pantoprazole) provide rapid symptom relief and mucosal healing — typically 4–8 weeks duration",
+      "Antacids provide immediate but short-lived symptom relief and can be used as supplementary therapy",
+      "H. pylori eradication should be confirmed 4–6 weeks after completing treatment using urea breath test or stool antigen test",
+      "Upper GI endoscopy is indicated for persistent symptoms despite treatment, alarm features, or in high H. pylori prevalence populations above 40 years to exclude atrophic gastritis or early gastric cancer"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for vomiting blood or coffee-ground material, black tarry stools, severe persistent pain, or unintended weight loss — these suggest gastric ulcer with bleeding or other serious pathology requiring endoscopy.",
+    "severity_level": "mild",
+    "specialist_recommendation": "Gastroenterologist / General Physician"
+  },
+  "dementia": {
+    "immediate_advice": [
+      "Establish a consistent daily routine — predictable structure significantly reduces agitation and anxiety in dementia patients",
+      "Remove fall hazards from the home: loose rugs, poor lighting, and cluttered pathways — dementia patients have high fall risk",
+      "Ensure legal documents (power of attorney, advance directives) are completed early while the patient has capacity",
+      "Caregiver support and respite care are as important as patient care — caregiver burnout is extremely common"
+    ],
+    "quick_solutions": [
+      "Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) provide modest but clinically meaningful symptomatic improvement in Alzheimer's and Lewy body dementia",
+      "Memantine is used in moderate-to-severe Alzheimer's dementia, alone or combined with a cholinesterase inhibitor",
+      "Lecanemab and donanemab (anti-amyloid antibodies) are approved for early Alzheimer's disease and slow progression by approximately 27–35% per recent clinical trials",
+      "Non-pharmacological strategies including cognitive stimulation therapy, reminiscence therapy, and music therapy have good evidence for improving quality of life",
+      "Neuropsychiatric symptoms (aggression, psychosis) should be managed non-pharmacologically first — antipsychotics increase mortality risk in elderly dementia patients"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for sudden acute confusion (delirium) in a patient with known dementia — this almost always indicates an underlying acute illness (infection, medication change, dehydration) requiring immediate treatment.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Neurologist / Geriatrician / Psychiatrist"
+  },
+  "Alzheimer's disease": {
+    "immediate_advice": [
+      "Get a formal cognitive assessment and diagnosis early — early diagnosis enables treatment, planning, and access to support services",
+      "Maintain cognitive engagement through reading, puzzles, social interaction, and mentally stimulating activities",
+      "Regular physical exercise reduces rate of cognitive decline and improves mood and sleep",
+      "Ensure home safety with supervision, door alarms, and removal of hazards — wandering is a significant risk in moderate-to-advanced stages"
+    ],
+    "quick_solutions": [
+      "Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) are approved for all stages of Alzheimer's dementia — most benefit seen in mild-to-moderate disease",
+      "Memantine is added in moderate-to-severe stages and particularly helps with daily function and reduces agitation",
+      "Lecanemab (Leqembi) received FDA approval in 2023 for early Alzheimer's — reduces amyloid plaque and slows decline by 27% over 18 months per CLARITY-AD trial",
+      "Management of cardiovascular risk factors (hypertension, diabetes, high cholesterol) reduces vascular contributions to cognitive decline",
+      "Sleep disorders are very common in Alzheimer's and treating insomnia and sleep apnoea can meaningfully improve cognitive function"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for sudden dramatic worsening of confusion, new agitation or psychosis, falls, or refusal to eat or drink — these indicate acute complications or delirium superimposed on dementia.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Neurologist / Geriatrician / Memory Clinic Specialist"
+  },
+  "Parkinson disease": {
+    "immediate_advice": [
+      "Never stop levodopa or dopamine agonists abruptly — sudden withdrawal causes neuroleptic malignant syndrome-like crisis with severe rigidity and hyperthermia",
+      "Take levodopa on an empty stomach 30–60 minutes before meals for maximum absorption — protein impairs its uptake",
+      "Engage in regular exercise particularly boxing training, Tai Chi, and balance exercises — these specifically reduce falls and slow motor decline",
+      "Fall prevention is critical — use assistive devices, remove home hazards, and consider occupational therapy assessment"
+    ],
+    "quick_solutions": [
+      "Levodopa/carbidopa remains the most effective therapy for motor symptoms — started when symptoms cause functional impairment",
+      "Dopamine agonists (pramipexole, ropinirole, rotigotine patch) are used as initial monotherapy in younger patients to delay levodopa complications",
+      "MAO-B inhibitors (rasagiline, selegiline) provide modest motor benefit and may have neuroprotective effects",
+      "Deep brain stimulation (DBS) of the subthalamic nucleus significantly reduces motor fluctuations and dyskinesias in advanced Parkinson's — suitable for patients with good cognitive function",
+      "Physiotherapy, speech therapy, and occupational therapy are essential components of Parkinson's management and should be started early"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for sudden worsening of motor function (possible dopaminergic crisis), high fever with rigidity after medication change, severe hallucinations, or frequent falls causing injury.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Neurologist / Movement Disorder Specialist"
+  },
+  "epilepsy": {
+    "immediate_advice": [
+      "Never leave a person having a seizure alone — place them on their side in the recovery position after convulsions stop to prevent aspiration",
+      "Do not restrain a person during a seizure, do not put anything in their mouth — this is dangerous and unnecessary",
+      "Take antiepileptic medication at exactly the same time daily — even a single missed dose can trigger breakthrough seizures",
+      "Avoid seizure triggers: sleep deprivation, alcohol, flashing lights, and emotional stress"
+    ],
+    "quick_solutions": [
+      "Sodium valproate has the broadest spectrum of efficacy across seizure types but is teratogenic and should be avoided in women of childbearing age",
+      "Levetiracetam and lamotrigine are preferred first-line agents for focal and generalised seizures due to tolerability and safety profiles",
+      "Seizure freedom is achieved in approximately 65–70% of patients with the first two antiepileptic drugs — drug-resistant epilepsy (failure of 2 adequate trials) warrants specialist evaluation",
+      "Epilepsy surgery (temporal lobectomy, lesionectomy) achieves seizure freedom in 60–70% of carefully selected candidates with focal epilepsy",
+      "Sodium valproate, lamotrigine, or levetiracetam are used for juvenile myoclonic epilepsy — a common generalised epilepsy syndrome in young adults"
+    ],
+    "when_to_seek_help": "Call emergency services for a seizure lasting more than 5 minutes, two seizures without recovery between them, seizure in water, during pregnancy, or the person does not regain normal consciousness — these constitute status epilepticus, which is a medical emergency.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Neurologist / Epileptologist"
+  },
+  "migraine disorders": {
+    "immediate_advice": [
+      "Move to a quiet, dark room as soon as migraine begins — light and sound sensitivity worsens pain significantly",
+      "Apply a cold pack to the forehead or neck — ice reduces inflammation in scalp arteries",
+      "Take acute medication at the very first sign of headache — waiting until pain is severe greatly reduces treatment efficacy",
+      "Stay hydrated — dehydration is a common migraine trigger and worsens severity"
+    ],
+    "quick_solutions": [
+      "Triptans (sumatriptan, rizatriptan, eletriptan) are the most effective acute treatment and target serotonin receptors specifically involved in migraine pathophysiology",
+      "NSAIDs (ibuprofen 400–600 mg or naproxen 500–1000 mg) combined with an antiemetic (metoclopramide) are effective for mild-to-moderate attacks",
+      "New gepants (rimegepant, ubrogepant) and ditans (lasmiditan) are CGRP antagonists effective for acute treatment and suitable for those with cardiovascular contraindications to triptans",
+      "Preventive therapy (topiramate, propranolol, amitriptyline, or CGRP monoclonal antibodies) is indicated when migraines occur 4 or more days per month",
+      "Anti-CGRP antibodies (erenumab, fremanezumab, galcanezumab) reduce migraine frequency by 50% in approximately 50% of patients with chronic migraine"
+    ],
+    "when_to_seek_help": "Seek emergency care for thunderclap headache (worst headache of life reaching peak in under 1 minute), headache with fever and neck stiffness, new neurological deficits, headache after head injury, or first-ever severe headache in a patient over 50.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Neurologist / Headache Specialist"
+  },
+  "depression mental / depressive disorder": {
+    "immediate_advice": [
+      "Seek professional help early — depression is a medical condition, not a character weakness, and responds well to treatment",
+      "Maintain daily structure: regular wake times, meals, and light physical activity — these have evidence for improving mood",
+      "Engage your social support network — isolation worsens depression significantly; inform trusted family members or friends",
+      "Avoid alcohol and recreational drugs — both are CNS depressants and worsen depressive symptoms and treatment response"
+    ],
+    "quick_solutions": [
+      "SSRIs (sertraline, escitalopram, fluoxetine) are first-line antidepressants — allow 4–6 weeks for full therapeutic effect and at least 6 months continuation after remission",
+      "SNRIs (venlafaxine, duloxetine) are alternatives, particularly effective when depression coexists with chronic pain or anxiety",
+      "Cognitive behavioural therapy (CBT) has equivalent efficacy to antidepressants for moderate depression and superior long-term relapse prevention",
+      "Combined pharmacotherapy plus psychotherapy produces better outcomes than either alone for moderate-to-severe depression",
+      "Ketamine or esketamine (Spravato) nasal spray is approved for treatment-resistant depression with rapid onset of effect within hours"
+    ],
+    "when_to_seek_help": "Seek immediate emergency care for active suicidal ideation with a plan or intent, self-harm, or psychotic symptoms. Contact a crisis line immediately if experiencing thoughts of suicide — treatment is effective and recovery is achievable.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Psychiatrist / Clinical Psychologist / General Physician"
+  },
+  "anxiety state": {
+    "immediate_advice": [
+      "Practice slow diaphragmatic breathing during acute anxiety — breathe in for 4 counts, hold for 2, out for 6 — this activates the parasympathetic nervous system",
+      "Reduce caffeine and alcohol — both worsen anxiety symptoms and interfere with sleep",
+      "Establish a regular sleep schedule — sleep deprivation dramatically amplifies anxiety",
+      "Engage in regular aerobic exercise — as effective as medication for mild-to-moderate generalised anxiety disorder"
+    ],
+    "quick_solutions": [
+      "SSRIs (sertraline, escitalopram) and SNRIs (venlafaxine, duloxetine) are first-line pharmacotherapy for generalised anxiety disorder, panic disorder, and social anxiety disorder",
+      "Cognitive behavioural therapy (CBT) is the gold-standard psychological treatment — equally effective to medication with better long-term relapse prevention",
+      "Buspirone is an anxiolytic with no dependence risk suitable for generalised anxiety disorder but takes 2–4 weeks to work",
+      "Benzodiazepines (diazepam, lorazepam) provide rapid relief but cause tolerance, dependence, and cognitive impairment — limited to short-term use under strict medical supervision",
+      "Mindfulness-based cognitive therapy (MBCT) and acceptance and commitment therapy (ACT) have strong evidence for anxiety prevention and management"
+    ],
+    "when_to_seek_help": "Seek urgent medical review if anxiety is accompanied by chest pain, severe shortness of breath, palpitations, or dizziness — these need cardiac causes excluded. Seek emergency care for panic attacks causing loss of control or if anxiety is associated with self-harm thoughts.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Psychiatrist / Clinical Psychologist / General Physician"
+  },
+  "bipolar disorder": {
+    "immediate_advice": [
+      "Never stop mood stabilisers without psychiatric guidance — abrupt discontinuation of lithium dramatically increases relapse and suicide risk",
+      "Maintain strict sleep regularity — sleep disruption is the most consistent precipitant of both manic and depressive episodes",
+      "Avoid alcohol and recreational drugs — both destabilise mood and interact dangerously with mood stabilisers",
+      "Have a written crisis plan shared with family and your mental health team for early warning signs of episode onset"
+    ],
+    "quick_solutions": [
+      "Lithium remains the most effective long-term mood stabiliser with the strongest evidence for suicide prevention — monitor renal function, thyroid, and blood levels regularly",
+      "Valproate and quetiapine are alternative mood stabilisers especially for rapid cycling or mixed features",
+      "Acute mania requires antipsychotics (olanzapine, haloperidol, risperidone) plus mood stabiliser — benzodiazepines for immediate agitation control",
+      "Quetiapine is the most evidence-based agent for bipolar depression — antidepressant monotherapy is generally avoided due to risk of switching to mania",
+      "Structured psychoeducation programmes reduce relapse rates by 40% — family-focused therapy and interpersonal social rhythm therapy are also evidence-based"
+    ],
+    "when_to_seek_help": "Seek emergency psychiatric care for acute manic episode with reckless behaviour, inability to sleep, grandiosity, and disorganised thinking — or severe depressive episode with suicidal ideation. Early hospital admission prevents escalation.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Psychiatrist / Mood Disorder Specialist"
+  },
+  "schizophrenia": {
+    "immediate_advice": [
+      "Antipsychotic medication must be taken consistently — non-adherence is the single most common cause of relapse and rehospitalisation",
+      "Maintain daily structure with regular sleep, meals, and social activities — disruption of routine precipitates psychotic episodes",
+      "Family education and support (family psychoeducation) significantly reduces relapse rates — involve trusted family members in care planning",
+      "Avoid cannabis and recreational drugs — cannabis use doubles the risk of psychotic relapse and dramatically worsens long-term outcomes"
+    ],
+    "quick_solutions": [
+      "Second-generation (atypical) antipsychotics (risperidone, olanzapine, quetiapine, aripiprazole) are first-line — chosen based on side effect profile and patient preference",
+      "Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia (failure of two adequate antipsychotic trials) and reduces suicidality — requires white cell count monitoring",
+      "Long-acting injectable antipsychotics (LAIs) significantly improve adherence and reduce relapse rates — should be offered to all patients as a matter of routine, not just for non-adherence",
+      "Cognitive remediation therapy and supported employment programmes improve social and occupational functioning alongside medication",
+      "Early intervention in psychosis services (within the first 3–5 years) are associated with significantly better long-term outcomes"
+    ],
+    "when_to_seek_help": "Seek emergency psychiatric evaluation for acute psychosis with command hallucinations, severe disorganisation, agitation with risk to self or others, complete self-neglect, or refusal of food and fluids.",
+    "severity_level": "serious",
+    "specialist_recommendation": "Psychiatrist / Early Intervention Psychosis Team"
+  },
+  "malignant neoplasms / primary malignant neoplasm": {
+    "immediate_advice": [
+      "Seek urgent specialist oncology evaluation — early diagnosis and staging are critical for treatment planning and prognosis",
+      "Do not pursue unproven or alternative therapies without discussing with your oncologist — delays to proven treatment significantly worsen outcomes",
+      "Maintain nutrition through specialist dietitian involvement — cancer cachexia and treatment side effects commonly impair nutritional status",
+      "Psychological support is as important as physical treatment — cancer diagnosis causes significant psychological distress requiring dedicated support"
+    ],
+    "quick_solutions": [
+      "Treatment modality depends on cancer type, stage, and patient fitness — surgery, radiotherapy, chemotherapy, targeted therapy, and immunotherapy are used alone or in combination",
+      "Genetic testing of tumour tissue guides targeted therapy selection — EGFR, ALK, BRCA, MSI-H, and other biomarkers now determine treatment in many cancers",
+      "Immune checkpoint inhibitors (pembrolizumab, nivolumab) have transformed outcomes in multiple cancer types including lung, melanoma, bladder, and colorectal cancer with MSI-H",
+      "Multidisciplinary tumour board review ensures comprehensive treatment planning involving oncology, surgery, radiology, pathology, and palliative care",
+      "Palliative care should be introduced early alongside curative-intent treatment — it improves quality of life, reduces symptom burden, and may improve survival"
+    ],
+    "when_to_seek_help": "Seek urgent medical evaluation for any new persistent mass, unexplained weight loss above 5% over 3 months, unexplained bleeding, persistent pain, or constitutional symptoms such as night sweats and fever — early presentation significantly improves treatment outcomes.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Oncologist / Cancer Multidisciplinary Team"
+  },
+  "anemia": {
+    "immediate_advice": [
+      "Do not start iron supplements without confirming iron deficiency — taking iron when anaemia has another cause can cause iron overload and organ damage",
+      "Increase dietary iron from lean red meat, legumes, spinach, and fortified cereals — pair with vitamin C to enhance non-haem iron absorption",
+      "Avoid tea, coffee, and calcium-rich foods within 1 hour of taking iron supplements — these significantly reduce iron absorption",
+      "Rest as needed and avoid strenuous exercise until haemoglobin is corrected — the heart works harder to compensate for low Hb"
+    ],
+    "quick_solutions": [
+      "Iron deficiency anaemia is treated with oral ferrous sulphate 200 mg twice or three times daily for minimum 3 months after normalisation of Hb to replenish stores",
+      "IV iron (ferric carboxymaltose or iron sucrose) is used when oral iron is not tolerated, absorption is impaired (IBD, post-bariatric surgery), or urgent correction is needed",
+      "B12 deficiency anaemia requires IM hydroxocobalamin injections — oral supplementation is an alternative for dietary deficiency",
+      "Folate deficiency is treated with daily folic acid 5 mg — identify and treat the underlying cause (malnutrition, malabsorption, or increased demand in pregnancy)",
+      "Blood transfusion is reserved for symptomatic severe anaemia (Hb below 70 g/L) or haemodynamic compromise — not for chronic stable anaemia"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for haemoglobin below 70 g/L, severe breathlessness or chest pain from anaemia, rapidly worsening pallor, or anaemia with unexplained bleeding — these require immediate investigation and may need transfusion.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Haematologist / General Physician"
+  },
+  "septicemia / systemic infection / sepsis": {
+    "immediate_advice": [
+      "Call emergency services immediately — sepsis progresses rapidly and every hour of delay in treatment increases mortality by 7%",
+      "Sepsis is a medical emergency — do not wait to see if symptoms improve",
+      "Inform emergency services of all recent infections, surgeries, wounds, or procedures that could be the source",
+      "Keep the patient warm and lying down — sepsis causes profound vasodilation and low blood pressure"
+    ],
+    "quick_solutions": [
+      "The Sepsis Six bundle must be initiated within 1 hour: blood cultures, IV broad-spectrum antibiotics, IV fluid resuscitation, oxygen, urine output monitoring, and lactate measurement",
+      "Blood cultures must be taken before antibiotics but must not delay antibiotic initiation beyond 1 hour from sepsis recognition",
+      "Early goal-directed fluid resuscitation with 30 mL/kg IV crystalloid for hypotension or lactate above 4 mmol/L",
+      "Vasopressors (noradrenaline) are initiated in ICU for septic shock unresponsive to fluid resuscitation — target MAP above 65 mmHg",
+      "Source control (drainage of abscess, removal of infected catheter or device) is critical alongside antibiotics — antibiotics alone are insufficient when a focus exists"
+    ],
+    "when_to_seek_help": "This is always a medical emergency. Any suspected infection with high fever or low temperature, rapid heart rate, rapid breathing, low blood pressure, confusion, or mottled skin requires emergency evaluation within minutes — not hours.",
+    "severity_level": "critical",
+    "specialist_recommendation": "Emergency Physician / Infectious Disease Specialist / Intensive Care Specialist"
+  },
+  "arthritis": {
+    "immediate_advice": [
+      "Balance rest with movement — complete rest worsens joint stiffness while overuse worsens inflammation; gentle range-of-motion exercises are ideal",
+      "Apply ice for acute flares to reduce inflammation — heat is better for chronic stiffness and muscle spasm",
+      "Maintain a healthy weight — each kilogram of excess weight places approximately 4 kg of additional force on the knee joint",
+      "Use assistive devices (walking stick, orthotics, raised toilet seats) to reduce joint load and prevent falls"
+    ],
+    "quick_solutions": [
+      "Paracetamol is first-line for mild-to-moderate osteoarthritis pain — use regularly at therapeutic doses (1 g four times daily) rather than as needed",
+      "Topical NSAIDs (diclofenac gel) are as effective as oral NSAIDs for knee osteoarthritis with significantly fewer systemic side effects",
+      "Intra-articular corticosteroid injections provide short-term pain relief in flaring joints — limited to 3–4 injections per year",
+      "Physiotherapy with strengthening exercises reduces pain and improves function as effectively as corticosteroid injections in knee OA",
+      "Total knee or hip replacement is recommended for severe OA causing significant functional limitation unresponsive to conservative management"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for sudden severe joint pain with swelling, redness, and fever — this suggests septic arthritis which requires emergency joint aspiration and IV antibiotics. Also seek review for rapidly progressive joint destruction.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Rheumatologist / Orthopaedic Surgeon / Physiotherapist"
+  },
+  "osteoporosis": {
+    "immediate_advice": [
+      "Falls prevention is the immediate priority — install grab rails in bathrooms, improve home lighting, use non-slip mats, and consider hip protectors",
+      "Ensure adequate calcium intake: 1000–1200 mg/day from dairy, fortified foods, or supplements — split supplement doses for better absorption",
+      "Ensure vitamin D sufficiency: 800–1000 IU/day — deficiency causes secondary hyperparathyroidism which accelerates bone loss",
+      "Avoid smoking and limit alcohol — both are directly toxic to osteoblasts and significantly increase fracture risk"
+    ],
+    "quick_solutions": [
+      "Bisphosphonates (alendronate, risedronate, zoledronic acid) are first-line pharmacological treatment — reduce vertebral fracture risk by 40–70% and hip fracture risk by 40%",
+      "Denosumab is an alternative to bisphosphonates for patients who cannot tolerate them or have severe renal impairment",
+      "Romosozumab (anti-sclerostin antibody) builds new bone and is used for 12 months in very high fracture risk — followed by antiresorptive therapy",
+      "Teriparatide and abaloparatide (anabolic agents) are reserved for severe osteoporosis or fractures on bisphosphonate therapy — treatment duration is 18–24 months",
+      "DEXA scan for bone mineral density assessment determines treatment thresholds — T-score below -2.5 defines osteoporosis"
+    ],
+    "when_to_seek_help": "Seek emergency care for any fracture after minimal trauma (fragility fracture). Seek urgent review for new acute back pain in an osteoporotic patient — vertebral compression fracture is common and requires imaging and pain management.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Rheumatologist / Endocrinologist / Orthopaedic Surgeon"
+  },
+  "degenerative polyarthritis": {
+    "immediate_advice": [
+      "Low-impact exercise — swimming, cycling, and water aerobics — maintains joint mobility and muscle strength without excessive joint loading",
+      "Weight management is the single most modifiable factor — reduce BMI to below 25 to significantly reduce joint load on weight-bearing joints",
+      "Use the RICE principle for acute flares: Rest, Ice, Compression, Elevation — combined with oral anti-inflammatories for 3–5 days",
+      "Occupational therapy assessment can identify ergonomic modifications to home and work environments that dramatically reduce joint strain"
+    ],
+    "quick_solutions": [
+      "Paracetamol and topical NSAIDs are first-line analgesics — oral NSAIDs are added if inadequate but require gastroprotection with a PPI",
+      "Intra-articular hyaluronic acid (viscosupplementation) provides moderate pain relief in knee OA lasting 3–6 months in responders",
+      "Duloxetine has evidence for pain reduction in osteoarthritis when analgesics are insufficient or poorly tolerated",
+      "Joint replacement surgery (knee, hip, shoulder) significantly improves quality of life in advanced degenerative polyarthritis — outcomes are excellent in appropriately selected patients",
+      "Structured physiotherapy with quadriceps and hip abductor strengthening significantly reduces knee OA pain and improves function"
+    ],
+    "when_to_seek_help": "Seek urgent medical review for sudden severe joint swelling with warmth and fever (possible septic arthritis or acute crystal arthropathy), rapidly accelerating joint destruction, or new neurological symptoms from spinal degeneration.",
+    "severity_level": "moderate",
+    "specialist_recommendation": "Rheumatologist / Orthopaedic Surgeon / Physiotherapist"
+  }
+}

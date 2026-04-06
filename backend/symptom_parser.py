@@ -8,11 +8,10 @@ import pickle
 import os
 
 load_dotenv(override=True)
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
-model=ChatGroq(model="openai/gpt-oss-120b", temperature=0.0)
+model=ChatGroq(model="llama-3.3-70b-versatile", temperature=0.0)
 
 ROOT         = Path(__file__).parent.parent
-SYMPTOMS_TXT = ROOT / "data" / "symptoms_list.txt"
+SYMPTOMS_TXT = ROOT / "data" / "symptom_list_clean.txt"
 
 with open(SYMPTOMS_TXT, "r")  as f:
         SYMPTOMS = [line.strip() for line in f if line.strip()]
@@ -122,7 +121,7 @@ def extract_symptoms(patient_text: str) -> list:
 
 def to_binary_vector(matched_symptoms: list) -> list:
     """
-    Converts matched symptom list to a binary vector of size 377.
+    Converts matched symptom list to a binary vector of size 84.
     Position of each symptom matches its index in SYMPTOMS list.
     """
     matched_set = set(matched_symptoms)
@@ -131,10 +130,10 @@ def to_binary_vector(matched_symptoms: list) -> list:
 
 def parse_symptoms(patient_text: str) -> dict:
     """
-    Full pipeline: patient free text → binary vector of size 377.
+    Full pipeline: patient free text → binary vector of size 84.
 
     Returns:
-        binary_vector    → list of 377 ints (0/1), feed into LightGBM
+        binary_vector    → list of 84 ints (0/1), feed into LightGBM
         matched_symptoms → list of matched symptom names from official list
     """
     matched = extract_symptoms(patient_text)

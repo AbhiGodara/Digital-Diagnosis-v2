@@ -12,7 +12,7 @@ from pathlib import Path
 BASE_DIR      = Path(__file__).parent.parent
 MODEL_PATH    = BASE_DIR / "models" / "lightgbm_model.pkl"
 ENCODER_PATH  = BASE_DIR / "models" / "label_encoder.pkl"
-SYMPTOMS_PATH = BASE_DIR / "data"   / "symptoms_list.txt"
+SYMPTOMS_PATH = BASE_DIR / "data"   / "symptom_list_clean.txt"
 
 
 class Classifier:
@@ -49,7 +49,7 @@ class Classifier:
     # ── Predict ───────────────────────────────────────────────────────
     def predict(self, binary_vector: list, top_k: int = 3) -> list:
         """
-        Takes a binary vector of size 377 and returns top-k predictions.
+        Takes a binary vector of size 84 and returns top-k predictions.
 
         Parameters
         ----------
@@ -73,7 +73,7 @@ class Classifier:
                 f"Vector size mismatch: got {len(binary_vector)}, expected {len(self.symptom_list)}"
             )
 
-        x     = np.array(binary_vector, dtype=np.float32).reshape(1, -1)
+        x = np.array(binary_vector, dtype=np.float32).reshape(1, -1)
         probs = self.model.predict_proba(x)[0]
 
         top_indices = np.argsort(probs)[::-1][:top_k]

@@ -188,13 +188,13 @@ if page == "🏠 Home":
     # Stats row
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.markdown('<div class="stat-box"><h2>361</h2><p>Diseases</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-box"><h2>42</h2><p>Diseases</p></div>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<div class="stat-box"><h2>377</h2><p>Symptoms</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-box"><h2>84</h2><p>Symptoms</p></div>', unsafe_allow_html=True)
     with col3:
         st.markdown('<div class="stat-box"><h2>96%</h2><p>Top-3 Accuracy</p></div>', unsafe_allow_html=True)
     with col4:
-        st.markdown('<div class="stat-box"><h2>220k</h2><p>Training Samples</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-box"><h2>2k+</h2><p>Training Samples</p></div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -383,12 +383,12 @@ elif page == "📊 About":
           │
           ▼
     ┌─────────────────────────────┐
-    │  Binary Vector (377-dim)    │  0/1 per symptom
+    │  Binary Vector (84-dim)     │  0/1 per symptom
     └─────────────────────────────┘
           │
           ▼
     ┌─────────────────────────────┐
-    │  LightGBM Classifier        │  220k samples | 361 diseases
+    │  LightGBM Classifier        │  2k+ samples | 42 diseases
     │  Top-3 Predictions          │  Disease + probability
     └─────────────────────────────┘
           │
@@ -428,9 +428,9 @@ elif page == "📊 About":
         - Requests (API calls)
 
         **Data & Models**
-        - 220k patient records
-        - 377 binary symptoms
-        - 361 disease classes
+        - 2k+ patient records
+        - 84 binary symptoms
+        - 42 disease classes
         """)
 
     st.markdown("---")

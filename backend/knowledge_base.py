@@ -1,6 +1,6 @@
 """
 knowledge_base.py
-Loads data/advice.json at startup and provides disease info
+Loads data/disease_knowledge.json at startup and provides disease info
 for the top-3 predictions returned by the classifier.
 
 Used by main.py:
@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 # ── Path ──────────────────────────────────────────────────────────────
 BASE_DIR     = Path(__file__).parent.parent
-ADVICE_PATH  = BASE_DIR / "data" / "advice.json"
+ADVICE_PATH  = BASE_DIR / "data" / "disease_knowledge.json"
 
 # ── Default fallback returned when disease is not in JSON ─────────────
 DEFAULT_INFO = {
@@ -38,9 +38,9 @@ class KnowledgeBase:
         self._loaded: bool = False
 
     def load(self):
-        """Load advice.json from disk. Called once at startup."""
+        """Load disease_knowledge.json from disk. Called once at startup."""
         if not ADVICE_PATH.exists():
-            logger.warning(f"advice.json not found at {ADVICE_PATH}. Falling back to defaults.")
+            logger.warning(f"disease_knowledge.json not found at {ADVICE_PATH}. Falling back to defaults.")
             self._loaded = True
             return
 
@@ -88,8 +88,8 @@ class KnowledgeBase:
         return {**DEFAULT_INFO, "disease_name": disease_name}
 
     def _extract_advice(self, entry: dict) -> dict:
-        """Pull the medical_advice block out of the raw entry."""
-        advice = entry.get("medical_advice", {})
+        """Pull the advice block out of the raw entry."""
+        advice = entry
         return {
             "symptom_category":          advice.get("symptom_category",          DEFAULT_INFO["symptom_category"]),
             "primary_symptoms":          advice.get("primary_symptoms",          DEFAULT_INFO["primary_symptoms"]),

@@ -43,7 +43,8 @@ User Input (free text + age + gender)
 │   Symptom Extraction    │
 │                         │
 │   Input: user text      │
-│         + 377 symptoms  │
+│   GET  /api/symptoms    │
+│   (list all 84 symptoms)│
 │   Output: matched       │
 │           symptom list  │
 └──────────┬──────────────┘
@@ -51,7 +52,7 @@ User Input (free text + age + gender)
            ▼
 ┌─────────────────────────┐
 │  Binary Vector Builder  │
-│  matched list → 377-dim │
+│  matched list → 84-dim  │
 │  binary vector          │
 └──────────┬──────────────┘
            │

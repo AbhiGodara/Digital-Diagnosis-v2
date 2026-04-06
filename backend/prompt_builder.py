@@ -19,6 +19,9 @@ Used by llm_client.py:
 
 def build_diagnosis_prompt(
     symptoms_text:    str,
+    patient_age:      int,
+    patient_gender:   str,
+    symptom_duration: str,
     matched_symptoms: list[str],
     predictions:      list[dict],
 ) -> str:
@@ -28,6 +31,8 @@ def build_diagnosis_prompt(
     Parameters
     ----------
     symptoms_text    : original free-text input from the patient
+    patient_age      : patient's age in years
+    symptom_duration : how long the patient has felt this way
     matched_symptoms : list of matched symptom strings from symptom_parser
     predictions      : list of top-3 dicts from classifier + knowledge_base
                        Each dict has: disease, probability, confidence, info
@@ -69,6 +74,11 @@ Your job is to write a clear, helpful, and empathetic diagnosis summary for the 
 PATIENT'S DESCRIPTION:
 "{symptoms_text}"
 
+PATIENT PROFILE:
+  - Age: {patient_age} years old
+  - Gender: {patient_gender}
+  - Symptom Duration: {symptom_duration}
+  
 SYMPTOMS IDENTIFIED:
 {symptoms_block}
 
@@ -146,6 +156,9 @@ if __name__ == "__main__":
 
     prompt = build_diagnosis_prompt(
         symptoms_text="I have a bad fever, keep coughing, and my chest hurts when I breathe. Feeling very tired.",
+        patient_age=35,
+        patient_gender="male",
+        symptom_duration="3 days",
         matched_symptoms=["fever", "cough", "hurts to breath", "fatigue", "chest tightness"],
         predictions=sample_predictions,
     )

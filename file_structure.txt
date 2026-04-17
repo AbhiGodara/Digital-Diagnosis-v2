@@ -8,7 +8,7 @@ digital-diagnosis-2.0/
 │   ├── symptom_parser.py               # LLM Call #1 - free text to binary vector
 │   ├── classifier.py                   # LightGBM model loading and inference
 │   ├── knowledge_base.py               # JSON lookup for top 3 predicted diseases
-│   ├── prompt_builder.py               # Assembles final prompt for LLM Call #2
+│   ├── prompts.py                      # Centralized prompts for LLM queries
 │   ├── llm_client.py                   # Groq API wrapper for both LLM calls
 │   └── schemas.py                      # Pydantic request/response models
 │

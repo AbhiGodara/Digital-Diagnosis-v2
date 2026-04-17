@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain.schema import SystemMessage, HumanMessage
 
-from prompt_builder import build_diagnosis_prompt
+from prompts import build_diagnosis_prompt, DIAGNOSIS_SUMMARY_SYSTEM_PROMPT
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -32,9 +32,11 @@ class LLMClient:
         if not api_key:
             raise EnvironmentError("GROQ_API_KEY not found. Add it to your .env file.")
 
+        model_name = os.getenv("LLM_MODEL_NAME", "llama-3.3-70b-versatile")
+        
         # Single model instance reused for both calls
         self.model = ChatGroq(
-            model="llama-3.3-70b-versatile",
+            model=model_name,
             temperature=0.0,
             api_key=api_key,
         )
@@ -75,11 +77,7 @@ class LLMClient:
             predictions=      predictions,
         )
 
-        system = SystemMessage(content=(
-            "You are a compassionate and professional AI medical assistant. "
-            "You write clear, empathetic, and responsible medical summaries for patients. "
-            "You always remind patients that your analysis is not a substitute for professional medical advice."
-        ))
+        system = SystemMessage(content=DIAGNOSIS_SUMMARY_SYSTEM_PROMPT)
         human = HumanMessage(content=prompt)
 
         logger.info("[LLMClient] Calling LLM for diagnosis summary...")

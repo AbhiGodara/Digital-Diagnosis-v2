@@ -194,7 +194,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 # *.csv
-*.pkl
+# *.pkl
 xtra/
 papers/
 # notebooks/02_model_training.ipynb

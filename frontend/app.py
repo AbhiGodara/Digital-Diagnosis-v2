@@ -15,8 +15,10 @@ import streamlit as st
 import requests
 from datetime import datetime
 
+import os
+
 # ── Config ────────────────────────────────────────────────────────────
-API_BASE   = "http://localhost:8000/api"
+API_BASE   = os.environ.get("API_BASE", "http://localhost:8000/api")
 APP_TITLE  = "Digital Diagnosis 2.0"
 
 st.set_page_config(

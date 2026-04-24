@@ -1,7 +1,7 @@
 class MedicalDiagnosisApp {
     constructor() {
         // API Configuration
-        this.API_BASE_URL = 'http://127.0.0.1:8000/api';
+        this.API_BASE_URL = 'https://digital-diagnosis-kkgx.onrender.com/api';
         
         // App State
         this.currentStep = 'input';

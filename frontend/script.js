@@ -253,9 +253,6 @@ class MedicalDiagnosisApp {
         this.showSection('analysis');
         
         try {
-            // Show loading animation for 3 seconds
-            await this.delay(2000);
-            
             // Call diagnosis API
             const diagnosisResults = await this.callDiagnosisAPI({
                 symptoms_text: symptoms,

@@ -3,11 +3,10 @@
     "id": 1,
     "patient_input": "I've been having trouble breathing and my chest feels really tight. My heart is beating really fast and I feel extremely anxious and nervous. This happens suddenly out of nowhere.",
     "expected_symptoms": [
-      "shortness of breath",
-      "chest tightness",
-      "palpitations",
-      "increased heart rate",
-      "anxiety and nervousness"
+      "worry",
+      "shortness_of_breath",
+      "palpitation",
+      "chest_tightness"
     ],
     "expected_disease": "panic disorder"
   },
@@ -15,11 +14,10 @@
     "id": 2,
     "patient_input": "My eyes are red and itchy, there's some white discharge coming out of my eye and it burns a lot. My vision feels a bit blurry too.",
     "expected_symptoms": [
-      "eye redness",
-      "itchiness of eye",
-      "white discharge from eye",
-      "eye burns or stings",
-      "diminished vision"
+      "pain",
+      "redness",
+      "disorientation",
+      "pruritus"
     ],
     "expected_disease": "conjunctivitis"
   },
@@ -27,24 +25,26 @@
     "id": 3,
     "patient_input": "I have really bad low back pain that won't go away for weeks. It's hard to move around and my legs feel stiff. No fever though.",
     "expected_symptoms": [
-      "low back pain",
-      "problems with movement",
-      "leg stiffness or tightness"
+      "pain",
+      "hypokinesia",
+      "stiffness"
     ],
-    "negation_check": ["fever"],
+    "negation_check": [
+      "fever"
+    ],
     "expected_disease": "lumbago"
   },
   {
     "id": 4,
     "patient_input": "I've been coughing a lot and there's yellow pus in what I'm coughing up. I have fever, chills and it hurts when I breathe. Feeling very tired and weak.",
     "expected_symptoms": [
-      "cough",
-      "pus in sputum",
       "fever",
-      "chills",
-      "hurts to breath",
+      "productive_cough",
+      "pleuritic_pain",
+      "cough",
+      "chill",
       "fatigue",
-      "weakness"
+      "asthenia"
     ],
     "expected_disease": "pneumonia"
   },
@@ -52,11 +52,9 @@
     "id": 5,
     "patient_input": "My throat is very sore and swollen, and my tonsils look really red. I have a high fever and it's very painful to swallow anything.",
     "expected_symptoms": [
-      "sore throat",
-      "throat swelling",
-      "swollen or red tonsils",
-      "fever",
-      "difficulty in swallowing"
+      "swelling",
+      "sore_throat",
+      "fever"
     ],
     "expected_disease": "tonsillitis"
   },
@@ -64,10 +62,10 @@
     "id": 6,
     "patient_input": "I feel really sad and hopeless all the time. I can't sleep at night, I've lost interest in everything, and I don't feel like eating at all. My energy is very low.",
     "expected_symptoms": [
-      "depression",
-      "insomnia",
-      "decreased appetite",
-      "fatigue"
+      "mood_depressed",
+      "fatigue",
+      "loss_of_appetite",
+      "sleeplessness"
     ],
     "expected_disease": "eating disorder"
   },
@@ -75,10 +73,10 @@
     "id": 7,
     "patient_input": "I have a bad headache and my neck is very stiff. I'm sensitive to light and I have a high fever. I also feel nauseous.",
     "expected_symptoms": [
+      "stiffness",
+      "nausea",
       "headache",
-      "neck stiffness or tightness",
-      "fever",
-      "nausea"
+      "fever"
     ],
     "expected_disease": "epilepsy"
   },
@@ -86,22 +84,25 @@
     "id": 8,
     "patient_input": "My knee is really swollen and painful. It's hard to bend and I feel weakness in my knee. No rash or fever.",
     "expected_symptoms": [
-      "knee swelling",
-      "knee pain",
-      "knee stiffness or tightness",
-      "knee weakness"
+      "stiffness",
+      "joint_pain",
+      "joint_swelling",
+      "asthenia"
     ],
-    "negation_check": ["skin rash", "fever"],
+    "negation_check": [
+      "fever",
+      "erythema"
+    ],
     "expected_disease": "injury to the knee"
   },
   {
     "id": 9,
     "patient_input": "I keep urinating very frequently and it burns a lot when I urinate. There's some blood in my urine and I have lower abdominal pain.",
     "expected_symptoms": [
-      "frequent urination",
-      "painful urination",
-      "blood in urine",
-      "lower abdominal pain"
+      "frequent_urination",
+      "dark_urine",
+      "pain",
+      "abdominal_pain"
     ],
     "expected_disease": "pyelonephritis"
   },
@@ -109,9 +110,8 @@
     "id": 10,
     "patient_input": "I have chest pain that feels like burning, especially after eating. I get a lot of heartburn and food keeps coming back up into my throat.",
     "expected_symptoms": [
-      "burning chest pain",
-      "heartburn",
-      "regurgitation"
+      "chest_pain",
+      "vomiting"
     ],
     "expected_disease": "gastritis"
   },
@@ -119,20 +119,22 @@
     "id": 11,
     "patient_input": "My skin has a red itchy rash and it's very dry and rough. Some areas are peeling. No fever or pain.",
     "expected_symptoms": [
-      "skin rash",
-      "itching of skin",
-      "skin dryness, peeling, scaliness, or roughness"
+      "redness",
+      "erythema",
+      "pruritus"
     ],
-    "negation_check": ["fever"],
+    "negation_check": [
+      "fever"
+    ],
     "expected_disease": "eczema"
   },
   {
     "id": 12,
     "patient_input": "I have been having seizures and uncontrolled shaking. Sometimes I lose consciousness suddenly without any warning. I feel confused after each episode.",
     "expected_symptoms": [
-      "seizures",
-      "abnormal involuntary movements",
-      "disturbance of memory"
+      "memory_loss",
+      "tremor",
+      "seizure"
     ],
     "expected_disease": "epilepsy"
   },
@@ -140,12 +142,11 @@
     "id": 13,
     "patient_input": "I feel very dizzy and I've fainted twice this week. My heart rate feels very slow and irregular. I also feel cold and very weak.",
     "expected_symptoms": [
-      "dizziness",
-      "fainting",
-      "decreased heart rate",
-      "irregular heartbeat",
-      "feeling cold",
-      "weakness"
+      "unresponsiveness",
+      "palpitation",
+      "chill",
+      "asthenia",
+      "dizziness"
     ],
     "expected_disease": "sick sinus syndrome"
   },
@@ -153,11 +154,11 @@
     "id": 14,
     "patient_input": "I've been gaining a lot of weight and I feel tired all the time. My skin is very dry, I feel cold even indoors, and my memory has been getting worse lately.",
     "expected_symptoms": [
-      "weight gain",
-      "fatigue",
-      "skin dryness, peeling, scaliness, or roughness",
-      "feeling cold",
-      "disturbance of memory"
+      "redness",
+      "weight_gain",
+      "memory_loss",
+      "chill",
+      "fatigue"
     ],
     "expected_disease": "hypothyroidism"
   },
@@ -165,11 +166,11 @@
     "id": 15,
     "patient_input": "I have pain and swelling in multiple joints. My joints are stiff especially in the morning. I also feel fatigued and have a mild fever.",
     "expected_symptoms": [
-      "joint pain",
-      "joint swelling",
-      "joint stiffness or tightness",
-      "fatigue",
-      "fever"
+      "morning_stiffness",
+      "fever",
+      "joint_swelling",
+      "joint_pain",
+      "fatigue"
     ],
     "expected_disease": "juvenile rheumatoid arthritis"
   },
@@ -177,10 +178,10 @@
     "id": 16,
     "patient_input": "I have sharp pain on my right side and it's hurting when I breathe deeply. I have a high fever and I'm coughing up blood.",
     "expected_symptoms": [
-      "side pain",
-      "hurts to breath",
+      "pain",
+      "pleuritic_pain",
       "fever",
-      "hemoptysis"
+      "productive_cough"
     ],
     "expected_disease": "pneumonia"
   },
@@ -188,34 +189,36 @@
     "id": 17,
     "patient_input": "I've been experiencing very heavy and painful periods. My lower abdomen hurts a lot, especially during my period. No unusual discharge.",
     "expected_symptoms": [
-      "heavy menstrual flow",
-      "painful menstruation",
-      "lower abdominal pain",
-      "pelvic pain"
+      "pain",
+      "abdominal_pain"
     ],
-    "negation_check": ["vaginal discharge"],
+    "negation_check": [
+      "redness"
+    ],
     "expected_disease": "endometriosis"
   },
   {
     "id": 18,
     "patient_input": "I have a lump in my breast and some discharge from my nipple. My breast feels sore. I haven't had any fever or skin rash.",
     "expected_symptoms": [
-      "lump or mass of breast",
-      "bleeding or discharge from nipple",
-      "pain or soreness of breast"
+      "chest_pain",
+      "swelling",
+      "redness"
     ],
-    "negation_check": ["fever", "skin rash"],
+    "negation_check": [
+      "fever",
+      "erythema"
+    ],
     "expected_disease": "breast infection (mastitis)"
   },
   {
     "id": 19,
     "patient_input": "I can't stop worrying about everything. I have trouble concentrating and I keep having nightmares. I feel restless all the time and have no interest in things I used to enjoy.",
     "expected_symptoms": [
-      "anxiety and nervousness",
-      "insomnia",
-      "nightmares",
-      "restlessness",
-      "depression"
+      "worry",
+      "agitation",
+      "mood_depressed",
+      "sleeplessness"
     ],
     "expected_disease": "acute stress reaction"
   },
@@ -223,22 +226,23 @@
     "id": 20,
     "patient_input": "I have a really bad headache that started suddenly at the front of my head. I also have nasal congestion and my sinuses are very painful. No ear pain.",
     "expected_symptoms": [
-      "frontal headache",
-      "nasal congestion",
-      "painful sinuses",
-      "sinus congestion"
+      "pain",
+      "headache",
+      "snuffle"
     ],
-    "negation_check": ["ear pain"],
+    "negation_check": [
+      "pain"
+    ],
     "expected_disease": "deviated nasal septum"
   },
   {
     "id": 21,
     "patient_input": "My skin turned yellow and my eyes look yellow too. I feel very fatigued and have pain in my upper abdomen. I also lost my appetite completely.",
     "expected_symptoms": [
-      "jaundice",
+      "yellow_skin",
+      "abdominal_pain",
       "fatigue",
-      "upper abdominal pain",
-      "decreased appetite"
+      "loss_of_appetite"
     ],
     "expected_disease": "cirrhosis"
   },
@@ -246,10 +250,9 @@
     "id": 22,
     "patient_input": "I have been losing weight without trying to. I feel full very quickly when eating, have nausea, and my stools look black and tarry.",
     "expected_symptoms": [
-      "recent weight loss",
-      "difficulty eating",
+      "dark_urine",
       "nausea",
-      "melena"
+      "loss_of_appetite"
     ],
     "expected_disease": "stomach cancer"
   },
@@ -257,9 +260,9 @@
     "id": 23,
     "patient_input": "I have a lot of trouble focusing and I'm very hyperactive. I forget things constantly and can't sit still. This has been a problem since I was a child.",
     "expected_symptoms": [
-      "disturbance of memory",
-      "restlessness",
-      "emotional symptoms"
+      "weepiness",
+      "agitation",
+      "memory_loss"
     ],
     "expected_disease": "attention deficit hyperactivity disorder (adhd)"
   },
@@ -267,20 +270,23 @@
     "id": 24,
     "patient_input": "My leg is swollen, red and very painful especially in the calf area. It feels warm to touch. I don't have any fever or chest pain.",
     "expected_symptoms": [
-      "leg swelling",
-      "leg pain"
+      "leg_swelling",
+      "calf_pain_walking"
     ],
-    "negation_check": ["fever", "chest pain"],
+    "negation_check": [
+      "chest_pain",
+      "fever"
+    ],
     "expected_disease": "deep vein thrombosis (dvt)"
   },
   {
     "id": 25,
     "patient_input": "I have sudden severe chest pain that spreads to my left arm. I'm sweating a lot and feel very short of breath. I also feel nauseous and dizzy.",
     "expected_symptoms": [
-      "sharp chest pain",
-      "arm pain",
+      "chest_pain",
+      "shortness_of_breath",
+      "arm_weakness",
       "sweating",
-      "shortness of breath",
       "nausea",
       "dizziness"
     ],

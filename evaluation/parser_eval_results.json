@@ -1,0 +1,757 @@
+{
+  "summary": {
+    "total_cases": 25,
+    "avg_precision": 0.732,
+    "avg_recall": 0.539,
+    "avg_f1": 0.585,
+    "negation_passed": 7,
+    "negation_total": 7
+  },
+  "cases": [
+    {
+      "id": 1,
+      "patient_input": "I've been having trouble breathing and my chest feels really tight. My heart is ...",
+      "expected_disease": "panic disorder",
+      "expected_symptoms": [
+        "shortness_of_breath",
+        "palpitation",
+        "worry",
+        "chest_tightness"
+      ],
+      "predicted_symptoms": [
+        "chest_tightness",
+        "palpitation",
+        "dyspnea"
+      ],
+      "true_positives": [
+        "chest_tightness",
+        "palpitation"
+      ],
+      "false_negatives": [
+        "shortness_of_breath",
+        "worry"
+      ],
+      "false_positives": [
+        "dyspnea"
+      ],
+      "negation_violations": [],
+      "precision": 0.667,
+      "recall": 0.5,
+      "f1": 0.571,
+      "passed_negation": true
+    },
+    {
+      "id": 2,
+      "patient_input": "My eyes are red and itchy, there's some white discharge coming out of my eye and...",
+      "expected_disease": "conjunctivitis",
+      "expected_symptoms": [
+        "disorientation",
+        "pruritus",
+        "pain",
+        "redness"
+      ],
+      "predicted_symptoms": [
+        "redness"
+      ],
+      "true_positives": [
+        "redness"
+      ],
+      "false_negatives": [
+        "disorientation",
+        "pain",
+        "pruritus"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "passed_negation": true
+    },
+    {
+      "id": 3,
+      "patient_input": "I have really bad low back pain that won't go away for weeks. It's hard to move ...",
+      "expected_disease": "lumbago",
+      "expected_symptoms": [
+        "hypokinesia",
+        "stiffness",
+        "pain"
+      ],
+      "predicted_symptoms": [
+        "stiffness",
+        "abdominal_pain"
+      ],
+      "true_positives": [
+        "stiffness"
+      ],
+      "false_negatives": [
+        "hypokinesia",
+        "pain"
+      ],
+      "false_positives": [
+        "abdominal_pain"
+      ],
+      "negation_violations": [],
+      "precision": 0.5,
+      "recall": 0.333,
+      "f1": 0.4,
+      "passed_negation": true
+    },
+    {
+      "id": 4,
+      "patient_input": "I've been coughing a lot and there's yellow pus in what I'm coughing up. I have ...",
+      "expected_disease": "pneumonia",
+      "expected_symptoms": [
+        "chill",
+        "cough",
+        "productive_cough",
+        "fever",
+        "pleuritic_pain",
+        "fatigue",
+        "asthenia"
+      ],
+      "predicted_symptoms": [
+        "chill",
+        "cough",
+        "chest_pain",
+        "fever",
+        "fatigue",
+        "asthenia"
+      ],
+      "true_positives": [
+        "chill",
+        "cough",
+        "fever",
+        "fatigue",
+        "asthenia"
+      ],
+      "false_negatives": [
+        "pleuritic_pain",
+        "productive_cough"
+      ],
+      "false_positives": [
+        "chest_pain"
+      ],
+      "negation_violations": [],
+      "precision": 0.833,
+      "recall": 0.714,
+      "f1": 0.769,
+      "passed_negation": true
+    },
+    {
+      "id": 5,
+      "patient_input": "My throat is very sore and swollen, and my tonsils look really red. I have a hig...",
+      "expected_disease": "tonsillitis",
+      "expected_symptoms": [
+        "fever",
+        "swelling",
+        "sore_throat"
+      ],
+      "predicted_symptoms": [
+        "fever",
+        "swelling",
+        "sore_throat"
+      ],
+      "true_positives": [
+        "fever",
+        "swelling",
+        "sore_throat"
+      ],
+      "false_negatives": [],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "passed_negation": true
+    },
+    {
+      "id": 6,
+      "patient_input": "I feel really sad and hopeless all the time. I can't sleep at night, I've lost i...",
+      "expected_disease": "eating disorder",
+      "expected_symptoms": [
+        "loss_of_appetite",
+        "fatigue",
+        "mood_depressed",
+        "sleeplessness"
+      ],
+      "predicted_symptoms": [
+        "feeling_hopeless",
+        "loss_of_appetite",
+        "sleeplessness",
+        "low_energy"
+      ],
+      "true_positives": [
+        "loss_of_appetite",
+        "sleeplessness"
+      ],
+      "false_negatives": [
+        "fatigue",
+        "mood_depressed"
+      ],
+      "false_positives": [
+        "feeling_hopeless",
+        "low_energy"
+      ],
+      "negation_violations": [],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "passed_negation": true
+    },
+    {
+      "id": 7,
+      "patient_input": "I have a bad headache and my neck is very stiff. I'm sensitive to light and I ha...",
+      "expected_disease": "epilepsy",
+      "expected_symptoms": [
+        "fever",
+        "stiffness",
+        "nausea",
+        "headache"
+      ],
+      "predicted_symptoms": [
+        "stiffness",
+        "fever",
+        "headache",
+        "nausea"
+      ],
+      "true_positives": [
+        "stiffness",
+        "fever",
+        "headache",
+        "nausea"
+      ],
+      "false_negatives": [],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "passed_negation": true
+    },
+    {
+      "id": 8,
+      "patient_input": "My knee is really swollen and painful. It's hard to bend and I feel weakness in ...",
+      "expected_disease": "injury to the knee",
+      "expected_symptoms": [
+        "stiffness",
+        "joint_pain",
+        "joint_swelling",
+        "asthenia"
+      ],
+      "predicted_symptoms": [],
+      "true_positives": [],
+      "false_negatives": [
+        "stiffness",
+        "joint_pain",
+        "joint_swelling",
+        "asthenia"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "passed_negation": true
+    },
+    {
+      "id": 9,
+      "patient_input": "I keep urinating very frequently and it burns a lot when I urinate. There's some...",
+      "expected_disease": "pyelonephritis",
+      "expected_symptoms": [
+        "abdominal_pain",
+        "frequent_urination",
+        "pain",
+        "dark_urine"
+      ],
+      "predicted_symptoms": [
+        "frequent_urination",
+        "abdominal_pain"
+      ],
+      "true_positives": [
+        "frequent_urination",
+        "abdominal_pain"
+      ],
+      "false_negatives": [
+        "pain",
+        "dark_urine"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667,
+      "passed_negation": true
+    },
+    {
+      "id": 10,
+      "patient_input": "I have chest pain that feels like burning, especially after eating. I get a lot ...",
+      "expected_disease": "gastritis",
+      "expected_symptoms": [
+        "vomiting",
+        "chest_pain"
+      ],
+      "predicted_symptoms": [
+        "chest_pain"
+      ],
+      "true_positives": [
+        "chest_pain"
+      ],
+      "false_negatives": [
+        "vomiting"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667,
+      "passed_negation": true
+    },
+    {
+      "id": 11,
+      "patient_input": "My skin has a red itchy rash and it's very dry and rough. Some areas are peeling...",
+      "expected_disease": "eczema",
+      "expected_symptoms": [
+        "erythema",
+        "pruritus",
+        "redness"
+      ],
+      "predicted_symptoms": [
+        "erythema",
+        "pruritus"
+      ],
+      "true_positives": [
+        "erythema",
+        "pruritus"
+      ],
+      "false_negatives": [
+        "redness"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8,
+      "passed_negation": true
+    },
+    {
+      "id": 12,
+      "patient_input": "I have been having seizures and uncontrolled shaking. Sometimes I lose conscious...",
+      "expected_disease": "epilepsy",
+      "expected_symptoms": [
+        "tremor",
+        "memory_loss",
+        "seizure"
+      ],
+      "predicted_symptoms": [
+        "seizure",
+        "confusion"
+      ],
+      "true_positives": [
+        "seizure"
+      ],
+      "false_negatives": [
+        "tremor",
+        "memory_loss"
+      ],
+      "false_positives": [
+        "confusion"
+      ],
+      "negation_violations": [],
+      "precision": 0.5,
+      "recall": 0.333,
+      "f1": 0.4,
+      "passed_negation": true
+    },
+    {
+      "id": 13,
+      "patient_input": "I feel very dizzy and I've fainted twice this week. My heart rate feels very slo...",
+      "expected_disease": "sick sinus syndrome",
+      "expected_symptoms": [
+        "chill",
+        "unresponsiveness",
+        "dizziness",
+        "palpitation",
+        "asthenia"
+      ],
+      "predicted_symptoms": [
+        "chill",
+        "hypotension",
+        "fall",
+        "dizziness",
+        "fatigue"
+      ],
+      "true_positives": [
+        "dizziness",
+        "chill"
+      ],
+      "false_negatives": [
+        "palpitation",
+        "unresponsiveness",
+        "asthenia"
+      ],
+      "false_positives": [
+        "fatigue",
+        "fall",
+        "hypotension"
+      ],
+      "negation_violations": [],
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "passed_negation": true
+    },
+    {
+      "id": 14,
+      "patient_input": "I've been gaining a lot of weight and I feel tired all the time. My skin is very...",
+      "expected_disease": "hypothyroidism",
+      "expected_symptoms": [
+        "chill",
+        "memory_loss",
+        "redness",
+        "fatigue",
+        "weight_gain"
+      ],
+      "predicted_symptoms": [
+        "fatigue",
+        "memory_loss",
+        "weight_gain"
+      ],
+      "true_positives": [
+        "fatigue",
+        "memory_loss",
+        "weight_gain"
+      ],
+      "false_negatives": [
+        "chill",
+        "redness"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75,
+      "passed_negation": true
+    },
+    {
+      "id": 15,
+      "patient_input": "I have pain and swelling in multiple joints. My joints are stiff especially in t...",
+      "expected_disease": "juvenile rheumatoid arthritis",
+      "expected_symptoms": [
+        "joint_pain",
+        "morning_stiffness",
+        "fever",
+        "joint_swelling",
+        "fatigue"
+      ],
+      "predicted_symptoms": [
+        "joint_pain",
+        "morning_stiffness",
+        "fever",
+        "joint_swelling",
+        "fatigue"
+      ],
+      "true_positives": [
+        "joint_pain",
+        "morning_stiffness",
+        "fever",
+        "joint_swelling",
+        "fatigue"
+      ],
+      "false_negatives": [],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "passed_negation": true
+    },
+    {
+      "id": 16,
+      "patient_input": "I have sharp pain on my right side and it's hurting when I breathe deeply. I hav...",
+      "expected_disease": "pneumonia",
+      "expected_symptoms": [
+        "productive_cough",
+        "pleuritic_pain",
+        "fever",
+        "pain"
+      ],
+      "predicted_symptoms": [
+        "productive_cough",
+        "chest_pain",
+        "fever",
+        "pleuritic_pain",
+        "abdominal_pain"
+      ],
+      "true_positives": [
+        "pleuritic_pain",
+        "fever",
+        "productive_cough"
+      ],
+      "false_negatives": [
+        "pain"
+      ],
+      "false_positives": [
+        "chest_pain",
+        "abdominal_pain"
+      ],
+      "negation_violations": [],
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.667,
+      "passed_negation": true
+    },
+    {
+      "id": 17,
+      "patient_input": "I've been experiencing very heavy and painful periods. My lower abdomen hurts a ...",
+      "expected_disease": "endometriosis",
+      "expected_symptoms": [
+        "pain",
+        "abdominal_pain"
+      ],
+      "predicted_symptoms": [
+        "abdominal_pain"
+      ],
+      "true_positives": [
+        "abdominal_pain"
+      ],
+      "false_negatives": [
+        "pain"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667,
+      "passed_negation": true
+    },
+    {
+      "id": 18,
+      "patient_input": "I have a lump in my breast and some discharge from my nipple. My breast feels so...",
+      "expected_disease": "breast infection (mastitis)",
+      "expected_symptoms": [
+        "chest_pain",
+        "swelling",
+        "redness"
+      ],
+      "predicted_symptoms": [],
+      "true_positives": [],
+      "false_negatives": [
+        "chest_pain",
+        "swelling",
+        "redness"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "passed_negation": true
+    },
+    {
+      "id": 19,
+      "patient_input": "I can't stop worrying about everything. I have trouble concentrating and I keep ...",
+      "expected_disease": "acute stress reaction",
+      "expected_symptoms": [
+        "mood_depressed",
+        "agitation",
+        "worry",
+        "sleeplessness"
+      ],
+      "predicted_symptoms": [
+        "worry"
+      ],
+      "true_positives": [
+        "worry"
+      ],
+      "false_negatives": [
+        "agitation",
+        "mood_depressed",
+        "sleeplessness"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "passed_negation": true
+    },
+    {
+      "id": 20,
+      "patient_input": "I have a really bad headache that started suddenly at the front of my head. I al...",
+      "expected_disease": "deviated nasal septum",
+      "expected_symptoms": [
+        "headache",
+        "pain",
+        "snuffle"
+      ],
+      "predicted_symptoms": [
+        "headache"
+      ],
+      "true_positives": [
+        "headache"
+      ],
+      "false_negatives": [
+        "snuffle",
+        "pain"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.333,
+      "f1": 0.5,
+      "passed_negation": true
+    },
+    {
+      "id": 21,
+      "patient_input": "My skin turned yellow and my eyes look yellow too. I feel very fatigued and have...",
+      "expected_disease": "cirrhosis",
+      "expected_symptoms": [
+        "loss_of_appetite",
+        "fatigue",
+        "yellow_skin",
+        "abdominal_pain"
+      ],
+      "predicted_symptoms": [
+        "yellow_skin",
+        "yellow_eyes",
+        "loss_of_appetite",
+        "fatigue",
+        "abdominal_pain"
+      ],
+      "true_positives": [
+        "loss_of_appetite",
+        "fatigue",
+        "yellow_skin",
+        "abdominal_pain"
+      ],
+      "false_negatives": [],
+      "false_positives": [
+        "yellow_eyes"
+      ],
+      "negation_violations": [],
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.889,
+      "passed_negation": true
+    },
+    {
+      "id": 22,
+      "patient_input": "I have been losing weight without trying to. I feel full very quickly when eatin...",
+      "expected_disease": "stomach cancer",
+      "expected_symptoms": [
+        "loss_of_appetite",
+        "nausea",
+        "dark_urine"
+      ],
+      "predicted_symptoms": [
+        "nausea"
+      ],
+      "true_positives": [
+        "nausea"
+      ],
+      "false_negatives": [
+        "loss_of_appetite",
+        "dark_urine"
+      ],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 0.333,
+      "f1": 0.5,
+      "passed_negation": true
+    },
+    {
+      "id": 23,
+      "patient_input": "I have a lot of trouble focusing and I'm very hyperactive. I forget things const...",
+      "expected_disease": "attention deficit hyperactivity disorder (adhd)",
+      "expected_symptoms": [
+        "weepiness",
+        "agitation",
+        "memory_loss"
+      ],
+      "predicted_symptoms": [
+        "hypokinesia"
+      ],
+      "true_positives": [],
+      "false_negatives": [
+        "weepiness",
+        "agitation",
+        "memory_loss"
+      ],
+      "false_positives": [
+        "hypokinesia"
+      ],
+      "negation_violations": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "passed_negation": true
+    },
+    {
+      "id": 24,
+      "patient_input": "My leg is swollen, red and very painful especially in the calf area. It feels wa...",
+      "expected_disease": "deep vein thrombosis (dvt)",
+      "expected_symptoms": [
+        "leg_swelling",
+        "calf_pain_walking"
+      ],
+      "predicted_symptoms": [
+        "pain",
+        "leg_swelling",
+        "calf_pain_walking",
+        "redness"
+      ],
+      "true_positives": [
+        "leg_swelling",
+        "calf_pain_walking"
+      ],
+      "false_negatives": [],
+      "false_positives": [
+        "pain",
+        "redness"
+      ],
+      "negation_violations": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.667,
+      "passed_negation": true
+    },
+    {
+      "id": 25,
+      "patient_input": "I have sudden severe chest pain that spreads to my left arm. I'm sweating a lot ...",
+      "expected_disease": "heart failure",
+      "expected_symptoms": [
+        "shortness_of_breath",
+        "chest_pain",
+        "arm_weakness",
+        "dizziness",
+        "sweating",
+        "nausea"
+      ],
+      "predicted_symptoms": [
+        "shortness_of_breath",
+        "chest_pain",
+        "arm_weakness",
+        "dizziness",
+        "sweating",
+        "nausea"
+      ],
+      "true_positives": [
+        "shortness_of_breath",
+        "chest_pain",
+        "arm_weakness",
+        "dizziness",
+        "sweating",
+        "nausea"
+      ],
+      "false_negatives": [],
+      "false_positives": [],
+      "negation_violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "passed_negation": true
+    }
+  ]
+}

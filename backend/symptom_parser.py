@@ -35,8 +35,22 @@ def extract_symptoms(patient_text: str) -> list:
     response = model.invoke([system, human])
 
     raw = response.content.strip()
-    raw = raw.replace("```json", "").replace("```", "").strip()
-    matched_symptoms = json.loads(raw)
+    
+    # Try to extract just the JSON list part in case the LLM added extra text
+    start_idx = raw.find('[')
+    end_idx = raw.rfind(']')
+    
+    if start_idx != -1 and end_idx != -1:
+        raw = raw[start_idx:end_idx+1]
+    else:
+        raw = "[]"
+
+    try:
+        matched_symptoms = json.loads(raw)
+        if not isinstance(matched_symptoms, list):
+            matched_symptoms = []
+    except json.JSONDecodeError:
+        matched_symptoms = []
 
     # Safety filter — keep only symptoms that are actually in our list
     matched_symptoms = [s for s in matched_symptoms if s in SYMPTOMS]

@@ -26,7 +26,7 @@ from symptom_parser import parse_symptoms
 
 # ── Paths ─────────────────────────────────────────────────────────────
 TEST_CASES_PATH  = Path(__file__).parent / "test_cases.json"
-SYMPTOM_LIST_PATH = Path(__file__).parent.parent / "data" / "symptoms_list.txt"
+SYMPTOM_LIST_PATH = Path(__file__).parent.parent / "data" / "symptom_list_clean.txt"
 
 
 def load_test_cases() -> list:

@@ -29,7 +29,7 @@ ROOT         = Path(__file__).parent.parent
 MODEL_PATH   = ROOT / "models" / "lightgbm_model.pkl"
 ENCODER_PATH = ROOT / "models" / "label_encoder.pkl"
 TEST_CSV     = ROOT / "data" / "processed" / "test.csv"
-SYMPTOMS_TXT = ROOT / "data" / "symptom_list.txt"
+SYMPTOMS_TXT = ROOT / "data" / "symptom_list_clean.txt"
 OUTPUT_PATH  = Path(__file__).parent / "classifier_eval_results.json"
 
 

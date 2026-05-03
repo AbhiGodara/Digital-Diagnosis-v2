@@ -1,0 +1,51 @@
+{
+  "top1_accuracy": 0.8583,
+  "top3_accuracy": 0.986,
+  "top5_accuracy": 0.996,
+  "num_classes": 50,
+  "num_test_rows": 501,
+  "worst_5_classes": [
+    {
+      "disease": "diabetes",
+      "f1": 0.609
+    },
+    {
+      "disease": "myocardial infarction",
+      "f1": 0.625
+    },
+    {
+      "disease": "hyperlipidemia",
+      "f1": 0.667
+    },
+    {
+      "disease": "bipolar disorder",
+      "f1": 0.7
+    },
+    {
+      "disease": "peripheral vascular disease",
+      "f1": 0.727
+    }
+  ],
+  "best_5_classes": [
+    {
+      "disease": "anxiety state",
+      "f1": 1.0
+    },
+    {
+      "disease": "epilepsy",
+      "f1": 1.0
+    },
+    {
+      "disease": "kidney failure acute",
+      "f1": 1.0
+    },
+    {
+      "disease": "migraine disorders",
+      "f1": 1.0
+    },
+    {
+      "disease": "septicemia / systemic infection / sepsis",
+      "f1": 1.0
+    }
+  ]
+}

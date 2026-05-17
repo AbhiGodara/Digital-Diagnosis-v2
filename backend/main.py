@@ -7,6 +7,7 @@ Run from project root:
 
 Endpoints:
     POST /api/diagnose      — main diagnosis pipeline
+    POST /api/chat          — AI doctor chatbot (LangChain agent)
     GET  /api/health        — health check
     GET  /api/diseases      — list all diseases the model knows
     GET  /api/symptoms      — list all 84 symptoms
@@ -17,18 +18,26 @@ import sys
 import os
 from datetime import datetime
 from contextlib import asynccontextmanager
+from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# Ensure backend folder is in Python path for direct uvicorn execution
-sys.path.append(os.path.dirname(__file__))
+# Ensure backend folder AND project root are in Python path
+BACKEND_DIR = os.path.dirname(__file__)
+ROOT_DIR    = os.path.dirname(BACKEND_DIR)
+sys.path.insert(0, ROOT_DIR)
+sys.path.insert(0, BACKEND_DIR)
 
 from classifier import classifier
 from symptom_parser import parse_symptoms
 from knowledge_base import get_disease_info
 from llm_client import llm_client
+
+# Chatbot agent — imported after path is fixed
+from chatbot.agent import get_agent_response
+from langchain_core.messages import HumanMessage, AIMessage
 
 # ── Logging ───────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -191,6 +200,64 @@ async def get_symptoms():
         "total":    classifier.num_symptoms,
         "symptoms": classifier.symptom_list,
     }
+
+
+# ── Chatbot ───────────────────────────────────────────────────────────
+
+# In-memory session store: session_id → list of LangChain messages
+_chat_sessions: dict[str, list] = {}
+
+class ChatMessage(BaseModel):
+    role: str        # "user" or "assistant"
+    content: str
+
+class ChatRequest(BaseModel):
+    session_id: str
+    message:    str
+
+class ChatResponse(BaseModel):
+    reply:   str
+    history: List[ChatMessage]
+
+
+@app.post("/api/chat", response_model=ChatResponse)
+async def chat(request: ChatRequest):
+    """
+    Stateful AI-doctor chatbot endpoint.
+    Keeps per-session conversation history so the agent remembers context.
+    """
+    if not request.message.strip():
+        raise HTTPException(status_code=400, detail="message cannot be empty")
+
+    # Retrieve or create session history
+    history = _chat_sessions.get(request.session_id, [])
+
+    # If brand-new session, seed with the assistant greeting
+    if not history:
+        history = [
+            AIMessage(content="Hello! I am your AI Medical Assistant. 👋 Describe your symptoms and I'll help you understand what might be going on.")
+        ]
+
+    # Append the new user message
+    history.append(HumanMessage(content=request.message))
+
+    try:
+        reply = get_agent_response(history)
+    except Exception as e:
+        logger.error(f"Chatbot error: {e}")
+        reply = "I'm sorry, I encountered an issue. Could you rephrase or try again?"
+
+    # Save assistant reply
+    history.append(AIMessage(content=reply))
+    _chat_sessions[request.session_id] = history
+
+    # Convert to serialisable format for the frontend
+    serialised = [
+        ChatMessage(role="assistant" if isinstance(m, AIMessage) else "user", content=m.content)
+        for m in history
+    ]
+
+    return ChatResponse(reply=reply, history=serialised)
 
 
 # ── Run ───────────────────────────────────────────────────────────────

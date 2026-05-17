@@ -1,55 +1,46 @@
-## Revised Architecture — Clean Version
-```
-User Input (free text + age + gender)
+## Revised Architecture — Agentic AI Doctor (Current Approach)
+```text
+User Input (natural conversation via Streamlit)
             │
             ▼
-┌─────────────────────────┐
-│   LLM CALL #1           │
-│   Symptom Extraction    │
-│                         │
-│   Input: user text      │
-│   GET  /api/symptoms    │
-│   (list all 84 symptoms)│
-│   Output: matched       │
-│           symptom list  │
-└──────────┬──────────────┘
+┌───────────────────────────────┐
+│     Streamlit Chat UI         │
+└──────────┬────────────────────┘
            │
            ▼
-┌─────────────────────────┐
-│  Binary Vector Builder  │
-│  matched list → 84-dim  │
-│  binary vector          │
-└──────────┬──────────────┘
+┌───────────────────────────────┐
+│     Langchain Agent           │
+│   (Groq Llama-3.3-70b)        │
+│                               │
+│ Evaluates intent:             │
+│ - General chat? -> direct ans │
+│ - Symptoms? -> Extract & Tool │
+└──────────┬────────────────────┘
+           │ IF symptoms gathered
+           ▼
+┌───────────────────────────────┐
+│   Tool: get_diagnosis()       │
+│                               │
+│ 1. Symptom Parser (LLM Call)  │
+│    Extracts to 84-dim vector  │
+│ 2. LightGBM Classifier        │
+│    Predicts Top-3 Diseases    │
+│ 3. Knowledge Base Lookup      │
+│    Fetches medical advice     │
+└──────────┬────────────────────┘
+           │ Returns structured JSON
+           ▼
+┌───────────────────────────────┐
+│     Langchain Agent           │
+│   (Groq Llama-3.3-70b)        │
+│                               │
+│ Generates natural, empathetic │
+│ response with diagnosis,      │
+│ advice, and disclaimers.      │
+└──────────┬────────────────────┘
            │
            ▼
-┌─────────────────────────┐
-│   LightGBM Classifier   │
-│                         │
-│   Input: binary vector  │
-│   Output: top 3         │
-│   diseases + probs      │
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  Knowledge Base Lookup  │
-│  Direct JSON lookup for │
-│  each of top 3 diseases │
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│   LLM CALL #2           │
-│   Explanation Generator │
-│                         │
-│   Input: predictions    │
-│         + disease info  │
-│         + user text     │
-│         + patient info  │
-│   Output: explanation   │
-│           + advice      │
-│           + disclaimer  │
-└──────────┬──────────────┘
-           │
-           ▼
-    Streamlit Display
+┌───────────────────────────────┐
+│     Streamlit Chat UI         │
+└───────────────────────────────┘
+```

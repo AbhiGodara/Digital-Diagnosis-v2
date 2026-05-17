@@ -1,0 +1,68 @@
+{
+  "evaluation_type": "disease_prediction",
+  "timestamp": "2026-05-15T09:58:51.477550",
+  "num_test_cases": 25,
+  "known_diseases": 50,
+  "models": [
+    {
+      "model": "LightGBM-Baseline",
+      "overall": {
+        "top1_accuracy": 84.0,
+        "top3_accuracy": 100.0,
+        "top1_correct": 21,
+        "top3_correct": 25,
+        "total_cases": 25
+      }
+    },
+    {
+      "model": "llama-3.1-8b-instant",
+      "overall": {
+        "top1_accuracy": 76.0,
+        "top3_accuracy": 92.0,
+        "top1_correct": 19,
+        "top3_correct": 23,
+        "total_cases": 25
+      }
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "overall": {
+        "top1_accuracy": 84.0,
+        "top3_accuracy": 96.0,
+        "top1_correct": 21,
+        "top3_correct": 24,
+        "total_cases": 25
+      }
+    },
+    {
+      "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "overall": {
+        "top1_accuracy": 76.0,
+        "top3_accuracy": 100.0,
+        "top1_correct": 19,
+        "top3_correct": 25,
+        "total_cases": 25
+      }
+    },
+    {
+      "model": "openai/gpt-oss-safeguard-20b",
+      "overall": {
+        "top1_accuracy": 84.0,
+        "top3_accuracy": 100.0,
+        "top1_correct": 21,
+        "top3_correct": 25,
+        "total_cases": 25
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "overall": {
+        "top1_accuracy": 76.0,
+        "top3_accuracy": 100.0,
+        "top1_correct": 19,
+        "top3_correct": 25,
+        "total_cases": 25
+      }
+    }
+  ]
+}

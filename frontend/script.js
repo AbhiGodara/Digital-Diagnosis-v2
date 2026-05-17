@@ -1,7 +1,7 @@
 class MedicalDiagnosisApp {
     constructor() {
         // API Configuration
-        this.API_BASE_URL = 'https://digital-diagnosis-kkgx.onrender.com/api';
+        this.API_BASE_URL = 'http://127.0.0.1:8000/api';
         
         // App State
         this.currentStep = 'input';
@@ -1070,3 +1070,191 @@ window.addEventListener('beforeunload', (e) => {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = MedicalDiagnosisApp;
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   AI DOCTOR CHATBOT WIDGET — Self-contained controller
+   ═══════════════════════════════════════════════════════════════════ */
+class AIDoctorChatbot {
+    constructor() {
+        this.API_BASE = 'http://127.0.0.1:8000/api';
+        this.sessionId = this._getOrCreateSession();
+        this.isOpen    = false;
+        this.isBusy    = false;
+
+        // DOM refs
+        this.fab       = document.getElementById('chatbot-fab');
+        this.widget    = document.getElementById('chatbotWidget');
+        this.messages  = document.getElementById('chatbotMessages');
+        this.input     = document.getElementById('chatbotInput');
+        this.sendBtn   = document.getElementById('chatbotSend');
+        this.closeBtn  = document.getElementById('chatbotCloseBtn');
+        this.clearBtn  = document.getElementById('chatbotClearBtn');
+        this.typing    = document.getElementById('chatbotTyping');
+        this.badge     = document.getElementById('chatbotBadge');
+
+        this._bindEvents();
+        this._addWelcomeMessage();
+    }
+
+    /* ── Session persistence ───────────────────────────────────── */
+    _getOrCreateSession() {
+        let sid = sessionStorage.getItem('chatbot_session_id');
+        if (!sid) {
+            sid = 'sess_' + Math.random().toString(36).slice(2) + Date.now();
+            sessionStorage.setItem('chatbot_session_id', sid);
+        }
+        return sid;
+    }
+
+    /* ── Events ────────────────────────────────────────────────── */
+    _bindEvents() {
+        // Toggle open/close
+        this.fab.addEventListener('click', () => this._toggleWidget());
+        this.closeBtn.addEventListener('click', () => this._closeWidget());
+
+        // Clear chat
+        this.clearBtn.addEventListener('click', () => this._clearChat());
+
+        // Send on button click
+        this.sendBtn.addEventListener('click', () => this._sendMessage());
+
+        // Send on Enter (Shift+Enter = new line)
+        this.input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                if (!this.sendBtn.disabled) this._sendMessage();
+            }
+        });
+
+        // Auto-grow textarea + enable/disable send button
+        this.input.addEventListener('input', () => {
+            this.sendBtn.disabled = !this.input.value.trim();
+            // Auto-resize
+            this.input.style.height = 'auto';
+            this.input.style.height = Math.min(this.input.scrollHeight, 100) + 'px';
+        });
+    }
+
+    /* ── Widget toggle ─────────────────────────────────────────── */
+    _toggleWidget() {
+        this.isOpen ? this._closeWidget() : this._openWidget();
+    }
+
+    _openWidget() {
+        this.isOpen = true;
+        this.widget.classList.add('open');
+        this.widget.setAttribute('aria-hidden', 'false');
+        this.badge.classList.add('hidden');
+        // Focus input with slight delay for animation
+        setTimeout(() => this.input.focus(), 280);
+        this._scrollToBottom();
+    }
+
+    _closeWidget() {
+        this.isOpen = false;
+        this.widget.classList.remove('open');
+        this.widget.setAttribute('aria-hidden', 'true');
+    }
+
+    /* ── Chat clear ────────────────────────────────────────────── */
+    _clearChat() {
+        // New session
+        this.sessionId = 'sess_' + Math.random().toString(36).slice(2) + Date.now();
+        sessionStorage.setItem('chatbot_session_id', this.sessionId);
+        this.messages.innerHTML = '';
+        this._addWelcomeMessage();
+    }
+
+    /* ── Welcome message ───────────────────────────────────────── */
+    _addWelcomeMessage() {
+        this._appendMessage(
+            'bot',
+            'Hello! 👋 I\'m your AI Medical Assistant. Describe your symptoms in natural language and I\'ll help you understand what might be going on. Remember — I\'m here to assist, not replace a real doctor.'
+        );
+    }
+
+    /* ── Send message ──────────────────────────────────────────── */
+    async _sendMessage() {
+        const text = this.input.value.trim();
+        if (!text || this.isBusy) return;
+
+        // Optimistic UI
+        this._appendMessage('user', text);
+        this.input.value = '';
+        this.input.style.height = 'auto';
+        this.sendBtn.disabled = true;
+        this._showTyping(true);
+        this.isBusy = true;
+
+        try {
+            const res = await fetch(`${this.API_BASE}/chat`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: this.sessionId,
+                    message: text
+                })
+            });
+
+            if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                throw new Error(err.detail || `Server error ${res.status}`);
+            }
+
+            const data = await res.json();
+            this._showTyping(false);
+            this._appendMessage('bot', data.reply);
+
+        } catch (err) {
+            console.error('Chatbot error:', err);
+            this._showTyping(false);
+            this._appendMessage('bot', '⚠️ Sorry, I couldn\'t reach the server. Please check your connection or try again.');
+        } finally {
+            this.isBusy = false;
+        }
+    }
+
+    /* ── Render a message bubble ───────────────────────────────── */
+    _appendMessage(role, text) {
+        const isBot = role === 'bot';
+        const msg   = document.createElement('div');
+        msg.className = `chat-msg ${isBot ? 'bot' : 'user'}`;
+
+        msg.innerHTML = `
+            <div class="chat-msg-avatar">
+                <i class="fas ${isBot ? 'fa-user-md' : 'fa-user'}"></i>
+            </div>
+            <div class="chat-msg-bubble">${this._formatText(text)}</div>
+        `;
+
+        this.messages.appendChild(msg);
+        this._scrollToBottom();
+    }
+
+    /* ── Simple markdown-like formatter ───────────────────────── */
+    _formatText(text) {
+        return text
+            // Bold: **text**
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Newlines → <br>
+            .replace(/\n/g, '<br>');
+    }
+
+    /* ── Typing indicator ──────────────────────────────────────── */
+    _showTyping(show) {
+        this.typing.classList.toggle('visible', show);
+        this._scrollToBottom();
+    }
+
+    /* ── Scroll chat to bottom ─────────────────────────────────── */
+    _scrollToBottom() {
+        requestAnimationFrame(() => {
+            this.messages.scrollTop = this.messages.scrollHeight;
+        });
+    }
+}
+
+/* Boot chatbot after DOM ready */
+document.addEventListener('DOMContentLoaded', () => {
+    window.aiChatbot = new AIDoctorChatbot();
+});

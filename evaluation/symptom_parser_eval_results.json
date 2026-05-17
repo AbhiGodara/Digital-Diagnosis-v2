@@ -1,0 +1,63 @@
+{
+  "evaluation_type": "symptom_parser",
+  "timestamp": "2026-05-15T09:51:56.207045",
+  "num_test_cases": 25,
+  "total_symptoms": 84,
+  "models": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "overall": {
+        "macro_precision": 0.9333,
+        "macro_recall": 0.64,
+        "macro_f1": 0.7468,
+        "exact_match_rate": 4.0,
+        "total_cases": 25,
+        "exact_matches": 1
+      }
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "overall": {
+        "macro_precision": 0.9667,
+        "macro_recall": 0.702,
+        "macro_f1": 0.8078,
+        "exact_match_rate": 8.0,
+        "total_cases": 25,
+        "exact_matches": 2
+      }
+    },
+    {
+      "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "overall": {
+        "macro_precision": 0.96,
+        "macro_recall": 0.712,
+        "macro_f1": 0.8132,
+        "exact_match_rate": 8.0,
+        "total_cases": 25,
+        "exact_matches": 2
+      }
+    },
+    {
+      "model": "openai/gpt-oss-safeguard-20b",
+      "overall": {
+        "macro_precision": 0.9433,
+        "macro_recall": 0.692,
+        "macro_f1": 0.7921,
+        "exact_match_rate": 8.0,
+        "total_cases": 25,
+        "exact_matches": 2
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "overall": {
+        "macro_precision": 0.9367,
+        "macro_recall": 0.738,
+        "macro_f1": 0.8213,
+        "exact_match_rate": 12.0,
+        "total_cases": 25,
+        "exact_matches": 3
+      }
+    }
+  ]
+}

@@ -1,48 +1,49 @@
 digital-diagnosis-2.0/
 │
-├── frontend/
-│   └── app.py                          # Streamlit UI - all pages and components
+├── chatbot/
+│   ├── app.py                          # Streamlit conversational UI
+│   ├── agent.py                        # Langchain Agent using Groq API
+│   └── tool.py                         # Diagnosis tool mapping to backend
 │
 ├── backend/
-│   ├── main.py                         # FastAPI app entry point, all routes
-│   ├── symptom_parser.py               # LLM Call #1 - free text to binary vector
-│   ├── classifier.py                   # LightGBM model loading and inference
-│   ├── knowledge_base.py               # JSON lookup for top 3 predicted diseases
-│   ├── prompts.py                      # Centralized prompts for LLM queries
-│   ├── llm_client.py                   # Groq API wrapper for both LLM calls
-│   └── schemas.py                      # Pydantic request/response models
+│   ├── main.py                         # FastAPI backend (if running as separate service)
+│   ├── symptom_parser.py               # LLM-based symptom extractor
+│   ├── classifier.py                   # LightGBM inference module
+│   ├── knowledge_base.py               # JSON lookup for disease advice
+│   ├── prompts.py                      # Prompts for symptom extraction
+│   ├── llm_client.py                   # Groq API client
+│   └── schemas.py                      # Pydantic models
 │
 ├── data/
 │   ├── raw/
-│   │   └── dataset.csv                 # Original 377-symptom dataset
 │   ├── processed/
-│   │   ├── train.csv                   # Filtered + split training data
-│   │   └── test.csv                    # Held-out test set
-│   ├── symptom_list.txt                # All 377 symptom names, one per line
-│   └── disease_knowledge.json          # Curated info for each disease class
+│   ├── symptom_list.txt                # Curated 84 symptoms
+│   └── disease_knowledge.json          # Medical advice dictionary
 │
 ├── models/
-│   ├── lightgbm_model.pkl              # Trained and serialized LightGBM model
-│   └── label_encoder.pkl              # Sklearn LabelEncoder for disease names
+│   ├── lightgbm_model.pkl              # Trained classifier
+│   └── label_encoder.pkl               # Target label mappings
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb                    # Exploratory data analysis
-│   ├── 02_preprocessing.ipynb          # Filtering, balancing, train/test split
-│   ├── 03_training.ipynb               # LightGBM training + evaluation metrics
-│   └── 04_symptom_parser_testing.ipynb # Manual evaluation of LLM extraction
+│   ├── 01_eda.ipynb                    # Data exploration
+│   ├── 02_preprocessing.ipynb          # Data cleaning
+│   ├── 03_model_training.ipynb         # LightGBM training
+│   └── 04_symptom_parser_testing.ipynb # Extraction testing
 │
 ├── evaluation/
-│   ├── test_cases.json                 # 50-100 manually created test cases
-│   ├── evaluate_parser.py              # Script to measure extraction accuracy
-│   └── evaluate_classifier.py         # Script to generate F1, accuracy, top-3
+│   ├── test_cases.json                 # Test suite for parser & prediction
+│   ├── evaluate_symptom_parser.py      # Measures extraction F1
+│   ├── evaluate_disease_prediction.py  # Measures Top-1/Top-3 Acc across models
+│   ├── symptom_parser_eval_results.json# Results for LLM parser
+│   └── disease_prediction_eval_results.json # Results for LightGBM/LLMs
 │
-├── tests/
-│   ├── test_symptom_parser.py          # Unit tests for parser module
-│   ├── test_classifier.py             # Unit tests for classifier module
-│   └── test_knowledge_base.py         # Unit tests for knowledge base lookup
+├── frontend/                           # Legacy frontend (Deprecated)
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
 │
-├── .env                                # GROQ_API_KEY goes here, never commit
-├── .env.example                        # Template showing required env variables
-├── .gitignore                          # Excludes .env, models/, __pycache__ etc
-├── requirements.txt                    # All Python dependencies with versions
-└── README.md                           # Setup instructions and architecture diagram
+├── tests/                              # Unit tests
+├── .env                                # API keys
+├── requirements.txt                    # Dependencies
+├── architecture.txt                    # Workflow diagram
+└── README.md                           # Documentation

@@ -35,22 +35,24 @@ Digital Diagnosis v2 is an AI-powered medical diagnosis assistant. It processes 
    ```
 
 ## Running the Application
-### Backend (FastAPI)
+### Backend (Django)
 ```bash
 conda activate DDenv
-uvicorn backend.main:app --reload --port 8000
+cd django_backend
+python manage.py runserver 8000
 ```
 
-### Frontend (Streamlit)
+### Frontend (React + Vite)
 ```bash
-conda activate DDenv
-cd frontend
-streamlit run app.py
+cd react_frontend
+npm run dev
 ```
 
 ## Structure
-- `backend/`: Core service components, AI clients, models, and FastAPI app.
-- `frontend/`: Streamlit frontend application.
+- `django_backend/`: Django backend project containing the API endpoints.
+- `backend/`: Core service components, AI clients, models.
+- `react_frontend/`: React + Vite frontend application.
+- `old_frontend/`: Previous Streamlit/HTML frontend.
 - `data/`: Datasets, parsed symptom lists, and processed data.
 - `models/`: Trained model binaries (LightGBM and LabelEncoder).
 - `evaluation/` & `tests/`: Scripts to evaluate model behavior and unit testing.

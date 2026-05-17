@@ -5,8 +5,13 @@ digital-diagnosis-2.0/
 │   ├── agent.py                        # Langchain Agent using Groq API
 │   └── tool.py                         # Diagnosis tool mapping to backend
 │
-├── backend/
-│   ├── main.py                         # FastAPI backend (if running as separate service)
+├── django_backend/
+│   ├── api/                            # Django app
+│   │   ├── views.py                    # Django API endpoints
+│   │   └── urls.py                     # App routing
+│   └── django_backend/                 # Project config
+│
+├── backend/                            # Core AI logic (used by Django)
 │   ├── symptom_parser.py               # LLM-based symptom extractor
 │   ├── classifier.py                   # LightGBM inference module
 │   ├── knowledge_base.py               # JSON lookup for disease advice
@@ -37,7 +42,15 @@ digital-diagnosis-2.0/
 │   ├── symptom_parser_eval_results.json# Results for LLM parser
 │   └── disease_prediction_eval_results.json # Results for LightGBM/LLMs
 │
-├── frontend/                           # Legacy frontend (Deprecated)
+├── react_frontend/                     # React + Vite frontend application
+│   ├── src/
+│   │   ├── App.jsx                     # Main UI component
+│   │   ├── App.css                     # Styles
+│   │   └── main.jsx                    # Entry point
+│   └── package.json
+│
+├── old_frontend/                       # Legacy frontend (Deprecated)
+│   ├── app.py                          # Streamlit UI
 │   ├── index.html
 │   ├── script.js
 │   └── style.css

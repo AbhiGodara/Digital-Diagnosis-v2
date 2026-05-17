@@ -1,10 +1,10 @@
 ## Revised Architecture — Agentic AI Doctor (Current Approach)
 ```text
-User Input (natural conversation via Streamlit)
+User Input (natural conversation via React UI)
             │
             ▼
 ┌───────────────────────────────┐
-│     Streamlit Chat UI         │
+│       React Chat UI           │
 └──────────┬────────────────────┘
            │
            ▼
@@ -41,6 +41,6 @@ User Input (natural conversation via Streamlit)
            │
            ▼
 ┌───────────────────────────────┐
-│     Streamlit Chat UI         │
+│       React Chat UI           │
 └───────────────────────────────┘
 ```

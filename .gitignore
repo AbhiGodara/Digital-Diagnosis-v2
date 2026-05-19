@@ -196,7 +196,8 @@ cython_debug/
 # *.csv
 # *.pkl
 xtra/
-papers/
+papers and reports/
+archive/
 # notebooks/02_model_training.ipynb
 
 # Cursor

@@ -1,10 +1,37 @@
-## Revised Architecture — Agentic AI Doctor (Current Approach)
+## Digital Diagnosis v2 Architecture
+
+Workflow 1: Main Dashboard (Symptom Analysis)
 ```text
-User Input (natural conversation via React UI)
-            │
-            ▼
+User Input (React UI Dashboard)
+           │ (POST /api/diagnose)
+           ▼
 ┌───────────────────────────────┐
-│       React Chat UI           │
+│     Django Backend API        │
+└──────────┬────────────────────┘
+           │
+           ▼
+┌───────────────────────────────┐
+│ 1. Symptom Parser (LLM Call)  │
+│    Extracts to 84-dim vector  │
+│ 2. LightGBM Classifier        │
+│    Predicts Top-3 Diseases    │
+│ 3. Knowledge Base Lookup      │
+│    Fetches medical advice     │
+│ 4. Summary LLM                │
+│    Patient-friendly summary   │
+└──────────┬────────────────────┘
+           │ Returns structured JSON
+           ▼
+User Output (React UI Dashboard)
+```
+
+Workflow 2: AI Doctor Chatbot (Conversational)
+```text
+User Input (React Chat Widget)
+           │ (POST /api/chat)
+           ▼
+┌───────────────────────────────┐
+│     Django Backend API        │
 └──────────┬────────────────────┘
            │
            ▼
@@ -20,15 +47,9 @@ User Input (natural conversation via React UI)
            ▼
 ┌───────────────────────────────┐
 │   Tool: get_diagnosis()       │
-│                               │
-│ 1. Symptom Parser (LLM Call)  │
-│    Extracts to 84-dim vector  │
-│ 2. LightGBM Classifier        │
-│    Predicts Top-3 Diseases    │
-│ 3. Knowledge Base Lookup      │
-│    Fetches medical advice     │
+│   (Reuses Workflow 1 ML pipe) │
 └──────────┬────────────────────┘
-           │ Returns structured JSON
+           │ Returns tool result
            ▼
 ┌───────────────────────────────┐
 │     Langchain Agent           │
@@ -40,7 +61,5 @@ User Input (natural conversation via React UI)
 └──────────┬────────────────────┘
            │
            ▼
-┌───────────────────────────────┐
-│       React Chat UI           │
-└───────────────────────────────┘
+User Output (React Chat Widget)
 ```

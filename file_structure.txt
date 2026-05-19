@@ -1,62 +1,63 @@
-digital-diagnosis-2.0/
+Digital Diagnosis v2/
 │
-├── chatbot/
-│   ├── app.py                          # Streamlit conversational UI
-│   ├── agent.py                        # Langchain Agent using Groq API
-│   └── tool.py                         # Diagnosis tool mapping to backend
+├── django_backend/                     # MAIN WEB SERVER (Django Framework)
+│   ├── django_backend/                 # Project Settings & Routing Configuration
+│   │   ├── settings.py                 # Core configurations (CORS, Apps, Middleware)
+│   │   ├── urls.py                     # Main server routing
+│   │   └── wsgi.py / asgi.py           # Server gateway entries
+│   ├── api/                            # Django Application (Exposes Web API)
+│   │   ├── views.py                    # API controllers (maps request -> service layer)
+│   │   ├── urls.py                     # API routing endpoints (/diagnose, /chat, etc.)
+│   │   └── apps.py / models.py         # App config and schema definitions
+│   ├── db.sqlite3                      # Local database (session storage)
+│   └── manage.py                       # Django CLI management script
 │
-├── django_backend/
-│   ├── api/                            # Django app
-│   │   ├── views.py                    # Django API endpoints
-│   │   └── urls.py                     # App routing
-│   └── django_backend/                 # Project config
+├── react_frontend/                     # MAIN CLIENT UI (React + Vite SPA)
+│   ├── src/
+│   │   ├── App.jsx                     # Dashboard UI, analysis logic, & AI Chatbot interface
+│   │   ├── App.css                     # Component specific styles
+│   │   ├── index.css                   # Custom global variables & typography
+│   │   └── main.jsx                    # SPA entry point
+│   ├── package.json                    # Package metadata & scripts (npm run dev / build)
+│   └── vite.config.js                  # Dev server and bundler config
 │
-├── backend/                            # Core AI logic (used by Django)
-│   ├── symptom_parser.py               # LLM-based symptom extractor
-│   ├── classifier.py                   # LightGBM inference module
-│   ├── knowledge_base.py               # JSON lookup for disease advice
-│   ├── prompts.py                      # Prompts for symptom extraction
-│   ├── llm_client.py                   # Groq API client
-│   └── schemas.py                      # Pydantic models
+├── backend/                            # SERVICE LAYER - Core Medical AI Logic (Imported by Django views)
+│   ├── symptom_parser.py               # Natural language parser utilizing Llama-3.3 on Groq
+│   ├── classifier.py                   # LightGBM Classifier model wrapper & vector loader
+│   ├── knowledge_base.py               # JSON lookup utility for disease info and recommendations
+│   ├── prompts.py                      # Prompt engineering templates for symptom mapping
+│   ├── llm_client.py                   # ChatGroq LLM helper client for summary compilation
+│   └── schemas.py                      # Pydantic data schemas for typing and validation
 │
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   ├── symptom_list.txt                # Curated 84 symptoms
-│   └── disease_knowledge.json          # Medical advice dictionary
+├── chatbot/                            # SERVICE LAYER - LangChain Agent (Imported by Django views)
+│   ├── agent.py                        # Langchain Agent executor using Llama-3.3-70b-versatile
+│   ├── tool.py                         # Reusable tool definition wrapping Workflow 1 API
+│   └── app.py                          # Streamlit fallback client script (Optional fallback)
 │
-├── models/
-│   ├── lightgbm_model.pkl              # Trained classifier
-│   └── label_encoder.pkl               # Target label mappings
+├── data/                               # DATA ASSETS
+│   ├── Raw / Processed / ...           # CSV training and clean evaluation sets
+│   ├── symptom_list.txt                # Static vocabulary of 84 symptoms mapped by model
+│   └── disease_knowledge.json          # Medical advice dictionary for 50 distinct diseases
 │
-├── notebooks/
+├── models/                             # ML BINARY STORE
+│   ├── lightgbm_model.pkl              # Trained LightGBM model pipeline
+│   └── label_encoder.pkl               # Model target output decoder mapping
+│
+├── notebooks/                          # TRAINING AND RESEARCH LABS
 │   ├── 01_eda.ipynb                    # Data exploration
 │   ├── 02_preprocessing.ipynb          # Data cleaning
-│   ├── 03_model_training.ipynb         # LightGBM training
-│   └── 04_symptom_parser_testing.ipynb # Extraction testing
+│   ├── 03_model_training.ipynb         # LightGBM training pipeline
+│   └── 04_symptom_parser_testing.ipynb # LLM symptom-vector extraction testing sandbox
 │
-├── evaluation/
-│   ├── test_cases.json                 # Test suite for parser & prediction
-│   ├── evaluate_symptom_parser.py      # Measures extraction F1
-│   ├── evaluate_disease_prediction.py  # Measures Top-1/Top-3 Acc across models
-│   ├── symptom_parser_eval_results.json# Results for LLM parser
-│   └── disease_prediction_eval_results.json # Results for LightGBM/LLMs
+├── evaluation/                         # EVALUATION ENGINE
+│   ├── test_cases.json                 # Test suite (50 highly-distinct patient scenarios)
+│   ├── evaluate_symptom_parser.py      # LLM symptom parser evaluation metrics (Precision/Recall/F1)
+│   ├── evaluate_disease_prediction.py  # Model accuracy evaluation (Top-1 / Top-3 benchmarks)
+│   └── result files (.json)            # Persistent test metrics logs
 │
-├── react_frontend/                     # React + Vite frontend application
-│   ├── src/
-│   │   ├── App.jsx                     # Main UI component
-│   │   ├── App.css                     # Styles
-│   │   └── main.jsx                    # Entry point
-│   └── package.json
-│
-├── old_frontend/                       # Legacy frontend (Deprecated)
-│   ├── app.py                          # Streamlit UI
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-│
-├── tests/                              # Unit tests
-├── .env                                # API keys
-├── requirements.txt                    # Dependencies
-├── architecture.txt                    # Workflow diagram
-└── README.md                           # Documentation
+├── .env.example                        # Empty configuration template for setup reference
+├── .gitignore                          # Git files and directories to ignore
+├── requirements.txt                    # Project Python dependencies
+├── runtime.txt                         # Heroku/Server runtime constraints
+├── architecture.txt                    # Workflow architecture schema
+└── README.md                           # Comprehensive user handbook & execution handbook

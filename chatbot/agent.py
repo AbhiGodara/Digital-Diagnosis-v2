@@ -46,7 +46,6 @@ GLOBAL RULES (apply to every reply):
 - Keep ALL replies short: 1-4 sentences maximum. Never write paragraphs.
 - Never invent symptoms.
 - Never give a definitive diagnosis — use "may suggest", "could be".
-- End medical advice with: "I'm an AI — please consult a doctor."
 - If unsure which mode applies, ask one short clarifying question."""
 
 

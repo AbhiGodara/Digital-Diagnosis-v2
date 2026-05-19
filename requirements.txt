@@ -33,3 +33,4 @@ ipykernel==6.29.4
 requests==2.32.3
 python-multipart==0.0.9    # for FastAPI file uploads
 httpx==0.27.0              # async HTTP client used by FastAPI internally
+gunicorn>=21.2.0           # WSGI production server for Render deployment

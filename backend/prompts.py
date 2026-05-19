@@ -1,6 +1,6 @@
 """
 prompts.py
-Centralized repository for all LLM prompts used in the Digital Diagnosis system.
+Centralized repository for all LLM prompts used in the HealthPilot system.
 
 Contains prompts for:
 1. Symptom parsing from patient free-text descriptions.

@@ -1,4 +1,4 @@
-Digital Diagnosis v2/
+HealthPilot/
 │
 ├── django_backend/                     # MAIN WEB SERVER (Django Framework)
 │   ├── django_backend/                 # Project Settings & Routing Configuration

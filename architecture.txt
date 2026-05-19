@@ -1,4 +1,4 @@
-## Digital Diagnosis v2 Architecture
+## HealthPilot Architecture
 
 Workflow 1: Main Dashboard (Symptom Analysis)
 ```text

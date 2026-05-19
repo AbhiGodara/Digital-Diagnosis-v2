@@ -1,6 +1,6 @@
-# Digital Diagnosis v2
+# HealthPilot
 
-Digital Diagnosis v2 is an AI-powered medical diagnosis assistant. It processes free-text input of patient symptoms, extracts the key symptoms using a Large Language Model (LLM), and passes them through a Machine Learning Classifier (LightGBM) to generate a top-3 diseases prediction along with medical advice and recommendations. 
+HealthPilot is an AI-powered medical diagnosis assistant. It processes free-text input of patient symptoms, extracts the key symptoms using a Large Language Model (LLM), and passes them through a Machine Learning Classifier (LightGBM) to generate a top-3 diseases prediction along with medical advice and recommendations. 
 
 ## Features
 - **Intelligent Symptom Parsing**: Uses a state-of-the-art LLM to correctly extract medical symptoms from raw sentences and handles negations.

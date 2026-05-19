@@ -13,9 +13,9 @@ from chatbot.agent import get_agent_response
 # ─── STREAMLIT UI SETUP ─────────────────────────────────────────────
 st.set_page_config(page_title="AI Doctor Chatbot", page_icon="🩺", layout="centered")
 
-st.title("🩺 Digital Diagnosis AI Doctor")
+st.title("🩺 HealthPilot AI Doctor")
 st.markdown("""
-Welcome to the Digital Diagnosis Assistant. Describe your symptoms naturally, and I will ask a few clarifying questions before giving a preliminary diagnosis.
+Welcome to the HealthPilot Assistant. Describe your symptoms naturally, and I will ask a few clarifying questions before giving a preliminary diagnosis.
 """)
 
 # Initialize chat history in session state
